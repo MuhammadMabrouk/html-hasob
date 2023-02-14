@@ -1,0 +1,68 @@
+<div tabindex="0"
+  id="ticTacToeWindow"
+  class="ticTacToeWindow appsWindow draggable mode-transition-bg"
+  :class="isTicTacToeWindowOpen && 'appsWindow__open'"
+  @focusin="taskbarAppsFocusin"
+  @focusout="taskbarAppsFocusout">
+
+  <!-- window title bar -->
+  <div class="appsWindow__titleBar dragger">
+    <strong class="appsWindow__titleBar__title" title="${{ index.components.window.ticTacToe.title }}$">
+      <span class="appsWindow__titleBar__icon" v-html="ticTacToeGameIcon"></span>
+      <span class="appsWindow__titleBar__text">${{ index.components.window.ticTacToe.title }}$</span>
+    </strong>
+    <ul class="appsWindow__titleBar__actionBtns" @mousedown.stop @touchstart.stop>
+      <li class="appsWindow__titleBar__actionItem minimizeBtn">
+        <button class="appsWindow__titleBar__actionBtn actionBtn" title="${{ index.components.window.actionBtns.minimize }}$" @click="closeWindow($event, true)">
+          <svg><use href="#mark-minimize"/></svg>
+        </button>
+      </li>
+      <li class="appsWindow__titleBar__actionItem maximizeBtn">
+        <button class="appsWindow__titleBar__actionBtn actionBtn" title="${{ index.components.window.actionBtns.maximize }}$" @click="maximizeWindow">
+          <svg><use href="#mark-maximize"/></svg>
+        </button>
+      </li>
+      <li class="appsWindow__titleBar__actionItem exitBtn">
+        <button class="appsWindow__titleBar__actionBtn actionBtn" title="${{ index.components.window.actionBtns.exit }}$" @click="closeWindow">
+          <svg><use href="#mark-error"/></svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- window workspace -->
+  <div class="ticTacToeWindow__workspace appsWindow__workspace">
+    <div class="ticTacToeWindow__content">
+      <div class="ticTacToeWindow__controls">
+        <button class="ticTacToeWindow__btn ticTacToeWindow__btn--control"
+          :class="{
+            'selected': ticTacToeSelectedSymbol === 'X',
+            'active': ticTacToeCurrentSymbol === 'X'
+          }"
+          @click="ticTacToeChangeSymbol">X</button>
+        <button class="ticTacToeWindow__btn ticTacToeWindow__btn--control"
+          :class="{
+            'selected': ticTacToeSelectedSymbol === 'O',
+            'active': ticTacToeCurrentSymbol === 'O'
+          }"
+          @click="ticTacToeChangeSymbol">O</button>
+        <button class="ticTacToeWindow__btn ticTacToeWindow__btn--restart" title="${{ index.global.restart }}$" @click="ticTacToeRestart">
+          <img src="assets/images/icons/reset.svg" alt="${{ index.global.reset }}$">
+        </button>
+      </div>
+      <div class="ticTacToeWindow__boxes"
+        data-game-won-msg="${{ index.components.window.ticTacToe.gameWon }}$"
+        data-game-over-msg="${{ index.components.window.ticTacToe.gameOver }}$">
+        <button class="ticTacToeWindow__btn" @click="ticTacToePlayerTurn"></button>
+        <button class="ticTacToeWindow__btn" @click="ticTacToePlayerTurn"></button>
+        <button class="ticTacToeWindow__btn" @click="ticTacToePlayerTurn"></button>
+        <button class="ticTacToeWindow__btn" @click="ticTacToePlayerTurn"></button>
+        <button class="ticTacToeWindow__btn" @click="ticTacToePlayerTurn"></button>
+        <button class="ticTacToeWindow__btn" @click="ticTacToePlayerTurn"></button>
+        <button class="ticTacToeWindow__btn" @click="ticTacToePlayerTurn"></button>
+        <button class="ticTacToeWindow__btn" @click="ticTacToePlayerTurn"></button>
+        <button class="ticTacToeWindow__btn" @click="ticTacToePlayerTurn"></button>
+      </div>
+    </div>
+  </div>
+</div>

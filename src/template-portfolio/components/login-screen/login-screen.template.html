@@ -1,0 +1,17 @@
+<div class="loginScreen" :class="isLoggedOut && 'logged-out'" :style="'background-image: url(' + appOpts?.wallpaperLogin + ');'">
+  <div class="loginScreen__content">
+    <div class="loginScreen__user">
+      <button class="loginScreen__user__imgBox" title="${{ index.taskbar.startMenu.actions.login.title }}$" @click="loginButton">
+        <img :src="appOpts?.userPicture" :alt="appOpts?.userName">
+      </button>
+      <strong class="loginScreen__user__name">{{ appOpts?.userName }}</strong>
+      <button class="loginScreen__user__loginBtn" @click="loginButton">${{ index.taskbar.startMenu.actions.login.title }}$</button>
+    </div>
+  </div>
+  <div class="loginScreen__footer">
+    <button class="loginScreen__restart" title="${{ index.taskbar.startMenu.actions.restart.title }}$" @click="restartWindow(null)">
+      <img src="assets/images/icons/restart.svg" alt="${{ index.taskbar.startMenu.actions.restart.title }}$">
+    </button>
+    <strong class="loginScreen__clock" :title="clockDate">{{ clockTime }}</strong>
+  </div>
+</div>

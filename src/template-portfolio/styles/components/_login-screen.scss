@@ -1,0 +1,108 @@
+/* Login Screen Styles */
+/*---------------------*/
+.loginScreen {
+  display: flex;
+  position: fixed;
+  z-index: 5000;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: hsl(var(--main-color-one)) center / cover no-repeat;
+  font-family: var(--body-font-family);
+  @include hideElement();
+
+  &.logged-out {
+    @include showElement();
+
+    ~ #app-inner {
+      animation: hideAppInner 0.2s ease-out 0.3s forwards;
+
+      @keyframes hideAppInner {
+        to {
+          visibility: hidden;
+        }
+      }
+    }
+  }
+
+  &__content {
+    padding: 1rem;
+    margin: auto;
+  }
+
+  &__user {
+    text-align: center;
+
+    &__imgBox {
+      display: block;
+      height: 10rem;
+      width: 10rem;
+      background-color: hsl(var(--main-color-one));
+      padding: 0.1875rem;
+      margin: auto;
+      border-radius: 6%;
+      filter: var(--drop-shadow);
+
+      img {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 5%;
+        transition: transform 0.2s ease-out;
+        will-change: transform;
+      }
+
+      &:hover {
+        img {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    &__name {
+      display: block;
+      color: hsl(var(--light-color));
+      margin: 1.5rem 0 1.125rem;
+    }
+
+    &__loginBtn {
+      display: block;
+      width: 100%;
+      height: 2.25rem;
+      background-color: hsl(var(--dark-color));
+      color: hsl(var(--light-color));
+      font-size: 1.125rem;
+      border-radius: var(--radius-size);
+
+      &:hover {
+        background-color: hsl(
+          var(--dark-h),
+          var(--dark-s),
+          calc(var(--dark-l) + 5%)
+        );
+      }
+    }
+  }
+
+  &__footer {
+    @include flexbox(flex, "", center, between, "", "");
+    position: absolute;
+    left: 1.25rem;
+    right: 1.25rem;
+    bottom: 1.25rem;
+  }
+
+  &__restart {
+    @include flexbox(flex, "", center, center, "", "");
+
+    img {
+      filter: brightness(0) invert(1);
+    }
+  }
+
+  &__clock {
+    color: hsl(var(--light-color));
+  }
+}

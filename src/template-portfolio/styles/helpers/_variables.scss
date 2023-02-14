@@ -1,0 +1,56 @@
+//------------------------------------------------------------------------------------------/
+// Variables
+//------------------------------------------------------------------------------------------/
+
+//*********************************
+//**         Media Sizes         **
+//*********************************
+
+// 1. Extra Extra Large Screen
+$min_1400: "(min-width: 1400px)";
+$max_1399: "(max-width: 1399px)";
+
+// 2. Extra Large Screen
+$min_1200_max_1399: "(min-width: 1200px) and (max-width: 1399px)";
+$min_1200: "(min-width: 1200px)";
+
+// 3. Large Screen
+$min_992_max_1199: "(min-width: 992px) and (max-width: 1199px)";
+$max_1199: "(max-width: 1199px)";
+$min_992: "(min-width: 992px)";
+
+// 4. Medium Screen
+$max_991: "(max-width: 991px)";
+$min_768: "(min-width: 768px)";
+
+// 5. Small Screen
+$max_767: "(max-width: 767px)";
+$min_577: "(min-width: 577px)";
+
+// 6. Extra Small Screen
+$max_576: "(max-width: 576px)";
+
+// 7. Screen Width 450px
+$max_450: "(max-width: 450px)";
+
+// 8. Screen Width 350px
+$max_350: "(max-width: 350px)";
+
+//*********************************
+//**            Global           **
+//*********************************
+
+:root {
+  --global-transition: 0.6s ease-in-out;
+  --control-height: 2.75rem;
+  --radius-size: 0.63rem;
+  --cursor-icon: url("../assets/images/icons/cursor-icon.svg"), auto;
+
+  @media #{$min_992} {
+    --taskbar-height: 2.75rem;
+  }
+
+  @media #{$max_991} {
+    --taskbar-height: 4.5rem;
+  }
+}

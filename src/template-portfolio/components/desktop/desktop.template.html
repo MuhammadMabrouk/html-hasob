@@ -1,0 +1,193 @@
+<div class="desktop" :style="'background-image: url(' + appOpts?.wallpaperDesktop + ');'">
+  <!-- clock widget (for small devices) -->
+  <div class="desktop__clockWidget" v-if="clockWidget">
+    <div class="desktop__clockWidget__start">
+      <div class="desktop__clockWidget__ampm" v-if="clockWidget?.ampm">{{ clockWidget?.ampm }}</div>
+      <div class="desktop__clockWidget__time">{{ clockWidget?.time }}</div>
+    </div>
+    <div class="desktop__clockWidget__end">
+      <div class="desktop__clockWidget__weekday">{{ clockWidget?.weekday }}</div>
+      <div class="desktop__clockWidget__date">{{ clockWidget?.date }}</div>
+    </div>
+  </div>
+
+  <!-- dynamic items -->
+  <template v-for="desktopItem in desktopItems" :key="desktopItem.id">
+    <button class="desktop__item"
+      :title="desktopItem.title['${{ index.i18n.lang.code }}$']"
+      :data-win-id="desktopItem.id + 'Window'"
+      @dblclick="openDesktopWindow"
+      @click="openDesktopWindow"
+      @keydown.enter="openDesktopWindow">
+      <span class="desktop__item__icon window__icon">
+        <img :src="desktopItem.icon" :alt="desktopItem.title['${{ index.i18n.lang.code }}$']" draggable="false">
+      </span>
+      <span class="desktop__item__text window__title">{{ desktopItem.title['${{ index.i18n.lang.code }}$'] }}</span>
+    </button>
+
+    <template v-if="desktopItem.type === 'file-explorer'">
+      <div tabindex="0"
+        class="fileExplorer appsWindow draggable mode-transition-bg"
+        :id="desktopItem.id + 'Window'"
+        :class="[desktopItem.id + 'Window', desktopItem.isWindowOpen && 'appsWindow__open']"
+        @focusin="taskbarAppsFocusin"
+        @focusout="taskbarAppsFocusout">
+
+        <!-- window title bar -->
+        <div class="appsWindow__titleBar fileExplorer__titleBar dragger">
+          <ul class="appsWindow__titleBar__actionBtns" @mousedown.stop @touchstart.stop>
+            <li class="appsWindow__titleBar__actionItem">
+              <button class="appsWindow__titleBar__actionBtn actionBtn" title="${{ index.components.window.actionBtns.backward }}$" @click="fileExplorerMoveFolder(desktopItem.id, -1)">
+                <svg class="rtl-mirror"><use href="#arrow-left"/></svg>
+              </button>
+            </li>
+            <li class="appsWindow__titleBar__actionItem">
+              <button class="appsWindow__titleBar__actionBtn actionBtn" title="${{ index.components.window.actionBtns.forward }}$" @click="fileExplorerMoveFolder(desktopItem.id, 1)">
+                <svg class="rtl-mirror"><use href="#arrow-right"/></svg>
+              </button>
+            </li>
+          </ul>
+          <strong class="appsWindow__titleBar__title" :title="fileExplorerDir[desktopItem.id]?.current?.title || desktopItem?.body?.title['${{ index.i18n.lang.code }}$']">
+            <span class="appsWindow__titleBar__icon">
+              <img :src="desktopItem.icon" :alt="desktopItem.title['${{ index.i18n.lang.code }}$']" draggable="false">
+            </span>
+            <span class="appsWindow__titleBar__text">{{ fileExplorerDir[desktopItem.id]?.current?.title || desktopItem?.body?.title['${{ index.i18n.lang.code }}$'] }}</span>
+          </strong>
+          <ul class="appsWindow__titleBar__actionBtns" @mousedown.stop @touchstart.stop>
+            <li class="appsWindow__titleBar__actionItem minimizeBtn">
+              <button class="appsWindow__titleBar__actionBtn actionBtn" title="${{ index.components.window.actionBtns.minimize }}$" @click="closeWindow($event, true)">
+                <svg><use href="#mark-minimize"/></svg>
+              </button>
+            </li>
+            <li class="appsWindow__titleBar__actionItem maximizeBtn">
+              <button class="appsWindow__titleBar__actionBtn actionBtn" title="${{ index.components.window.actionBtns.maximize }}$" @click="maximizeWindow">
+                <svg><use href="#mark-maximize"/></svg>
+              </button>
+            </li>
+            <li class="appsWindow__titleBar__actionItem exitBtn">
+              <button class="appsWindow__titleBar__actionBtn actionBtn" title="${{ index.components.window.actionBtns.exit }}$" @click="closeWindow">
+                <svg><use href="#mark-error"/></svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- window workspace -->
+        <div class="fileExplorer__workspace appsWindow__workspace"
+          :class="desktopItem.id + 'Window__workspace'"
+          :data-view="appSettings?.fileExplorerView">
+          <button v-for="(fileExplorerItem, i) in fileExplorerItems(desktopItem.id, desktopItem?.body?.items)" :key="fileExplorerItem.id"
+            v-focus="i === 0"
+            class="fileExplorer__item"
+            :id="'btn-' + fileExplorerItem.id"
+            :title="fileExplorerItem.title['${{ index.i18n.lang.code }}$']"
+            :data-href="(fileExplorerItem.kind === 'file' && ['image', 'video', 'webpage'].includes(fileExplorerItem.type)) ? fileExplorerItem.url : null"
+            :data-type="(fileExplorerItem.kind === 'file' && ['image', 'video'].includes(fileExplorerItem.type)) ? fileExplorerItem.type : null"
+            :data-gallery="(fileExplorerItem.kind === 'file' && ['image', 'video'].includes(fileExplorerItem.type)) ? fileExplorerItem.folder : null"
+            @dblclick="fileExplorerItemClick($event, fileExplorerItem)"
+            @click="fileExplorerItemClick($event, fileExplorerItem)"
+            @keydown.enter="fileExplorerItemClick($event, fileExplorerItem)">
+            <div class="fileExplorer__item__interface">
+              <template v-if="fileExplorerItem.kind === 'folder'">
+                <span class="fileExplorer__item__icon">
+                  <img src="assets/images/desktop/folder.svg" :alt="fileExplorerItem.title['${{ index.i18n.lang.code }}$']" draggable="false">
+                </span>
+              </template>
+              <template v-else-if="fileExplorerItem.type === 'image'">
+                <span class="fileExplorer__item__icon">
+                  <img :src="fileExplorerItem.url" :alt="fileExplorerItem.title['${{ index.i18n.lang.code }}$']" draggable="false">
+                </span>
+              </template>
+              <template v-else-if="fileExplorerItem.type === 'video'">
+                <span class="fileExplorer__item__icon">
+                  <video :src="fileExplorerItem.url" draggable="false"></video>
+                </span>
+              </template>
+              <template v-else-if="fileExplorerItem.type === 'webpage'">
+                <span class="fileExplorer__item__icon">
+                  <img src="assets/images/desktop/file-webpage.svg" :alt="fileExplorerItem.title['${{ index.i18n.lang.code }}$']" draggable="false">
+                </span>
+              </template>
+              <template v-else>
+                <span class="fileExplorer__item__icon window__icon">
+                  <img src="assets/images/desktop/file-text.svg" :alt="fileExplorerItem.title['${{ index.i18n.lang.code }}$']" draggable="false">
+                </span>
+        
+                <!-- text window content -->
+                <template>
+                  <div class="win-id">{{ fileExplorerItem.id + 'Window' }}</div>
+                  <div class="win-title">{{ fileExplorerItem.title['${{ index.i18n.lang.code }}$'] }}</div>
+                  <div class="win-content" v-html="fileExplorerItem.content['${{ index.i18n.lang.code }}$']"></div>
+                </template>
+              </template>
+              <span class="fileExplorer__item__text window__title">{{ fileExplorerItem.title['${{ index.i18n.lang.code }}$'] }}</span>
+            </div>
+            <div class="fileExplorer__item__date">{{ fileExplorerItem.date.year }}/{{ fileExplorerItem.date.month }}/{{ fileExplorerItem.date.day }}</div>
+          </button>
+        </div>
+
+        <!-- window footer -->
+        <div class="appsWindow__footer fileExplorer__footer">
+          <div class="fileExplorer__footer__items"><span class="count">0</span> ${{ index.components.window.actionBtns.items }}$</div>
+          <div class="fileExplorer__footer__btns">
+            <button :class="{ active: appSettings?.fileExplorerView === 'view-list' }" title="${{ index.components.window.actionBtns.viewList }}$" @click="fileExplorerChangeView($event, 'view-list')"><svg><use href="#icon-list"/></svg></button>
+            <button :class="{ active: appSettings?.fileExplorerView === 'view-grid' }" title="${{ index.components.window.actionBtns.viewGrid }}$" @click="fileExplorerChangeView($event, 'view-grid')"><svg><use href="#icon-grid"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </template>
+  </template>
+
+  <!-- default items -->
+  <button class="desktop__item"
+    title="${{ index.desktop.email }}$"
+    data-win-id="emailWindow"
+    @dblclick="openEmailWindow($event, true)"
+    @click="openEmailWindow($event, true)"
+    @keydown.enter="openEmailWindow">
+    <span class="desktop__item__icon window__icon" v-html="emailIcon"></span>
+    <span class="desktop__item__text window__title">${{ index.desktop.email }}$</span>
+  </button>
+  <button class="desktop__item"
+    title="${{ index.desktop.ticTacToe }}$"
+    data-win-id="ticTacToeWindow"
+    @dblclick="openTicTacToeWindow($event, true)"
+    @click="openTicTacToeWindow($event, true)"
+    @keydown.enter="openTicTacToeWindow">
+    <span class="desktop__item__icon window__icon" v-html="ticTacToeGameIcon"></span>
+    <span class="desktop__item__text window__title">${{ index.desktop.ticTacToe }}$</span>
+  </button>
+  <button class="desktop__item"
+    title="${{ index.desktop.memoryCard }}$"
+    data-win-id="memoryCardWindow"
+    @dblclick="openMemoryCardWindow($event, true)"
+    @click="openMemoryCardWindow($event, true)"
+    @keydown.enter="openMemoryCardWindow">
+    <span class="desktop__item__icon window__icon" v-html="memoryCardGameIcon"></span>
+    <span class="desktop__item__text window__title">${{ index.desktop.memoryCard }}$</span>
+  </button>
+  <button class="desktop__item"
+    title="${{ index.desktop.snake }}$"
+    data-win-id="snakeWindow"
+    @dblclick="openSnakeWindow($event, true)"
+    @click="openSnakeWindow($event, true)"
+    @keydown.enter="openSnakeWindow">
+    <span class="desktop__item__icon window__icon" v-html="snakeGameIcon"></span>
+    <span class="desktop__item__text window__title">${{ index.desktop.snake }}$</span>
+  </button>
+
+  <!-- text viewer popup -->
+  @@include('./components/desktop/text-viewer/text-viewer.template.html')
+
+  <!-- email popup -->
+  @@include('./components/taskbar/start-menu/email/email.template.html')
+
+  <!-- tic tac toe game popup -->
+  @@include('./components/taskbar/start-menu/games/tic-tac-toe/tic-tac-toe.template.html')
+
+  <!-- memory card game popup -->
+  @@include('./components/taskbar/start-menu/games/memory-card/memory-card.template.html')
+
+  <!-- snake game popup -->
+  @@include('./components/taskbar/start-menu/games/snake/snake.template.html')
+</div>

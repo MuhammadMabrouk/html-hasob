@@ -1,0 +1,45 @@
+/* Custom Input Select */
+/*---------------------*/
+webrouk-custom-select {
+  --w-primary-color: hsl(var(--main-color-one));
+  --w-bg-one: hsl(var(--bg-color-one));
+  --w-bg-two: hsl(var(--bg-color-two));
+  --w-inputs-bg: hsl(var(--inputs-bg-color));
+  --w-inputs-disabled-bg: hsl(var(--inputs-disabled-bg-color));
+  --w-text-color: hsl(var(--text-color));
+  --w-border-color: hsl(var(--border-color));
+  --w-success-color: hsl(var(--success-color));
+  --w-danger-color: hsl(var(--danger-color));
+  --w-height-size: var(--control-height);
+  --w-radius-size: var(--radius-size);
+
+  &::part(select-styled) {
+    border: 0.0625rem solid;
+    box-shadow: var(--inset-shadow);
+    cursor: inherit;
+
+    &:not(:focus) {
+      color: inherit;
+      border-color: hsl(var(--inputs-bg-color));
+    }
+
+    &:focus {
+      @include focusStyle();
+    }
+  }
+
+  &::part(search),
+  &::part(option-item) {
+    &:focus {
+      @include focusStyle(null, true);
+    }
+  }
+
+  &::part(search) {
+    font-size: inherit;
+  }
+
+  &::part(option-item) {
+    cursor: inherit;
+  }
+}

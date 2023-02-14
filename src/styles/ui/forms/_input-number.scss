@@ -1,0 +1,45 @@
+/* Custom Input Number */
+/*---------------------*/
+webrouk-custom-number {
+  &::part(root) {
+    position: relative;
+  }
+
+  &::part(input) {
+    text-align: center;
+    padding: {
+      left: calc(var(--control-height) * 0.75) !important;
+      right: calc(var(--control-height) * 0.75) !important;
+    }
+    cursor: inherit;
+  }
+
+  &::part(btn) {
+    position: absolute;
+    top: 0;
+    height: var(--control-height);
+    width: calc(var(--control-height) * 0.75);
+    background: none;
+    color: hsl(var(--t-color-two));
+    font-size: 1.5rem;
+    padding: 0;
+    border: 0;
+    cursor: inherit;
+
+    &:focus {
+      @include focusStyle();
+    }
+  }
+
+  &::part(btn-up) {
+    @include appDir() {
+      #{dirs(right, left)}: 0;
+    }
+  }
+
+  &::part(btn-down) {
+    @include appDir() {
+      #{dirs(left, right)}: 0;
+    }
+  }
+}

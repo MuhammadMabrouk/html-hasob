@@ -1,0 +1,29 @@
+//------------------------------------------------------------------------------------------/
+// Directions
+//------------------------------------------------------------------------------------------/
+
+// app directions
+$directions: 'html[dir="ltr"]', 'html[dir="rtl"]';
+
+// implementation of directions
+@mixin appDir($directions: $directions) {
+
+  // generate app directions
+  @each $dir in $directions {
+    #{$dir} & {
+      $cur-dir: $dir !global;
+
+      @content;
+
+      $cur-dir: null !global;
+    }
+  }
+}
+
+@function dirs($first_dir_val, $second_dir_val) {
+  @if $cur-dir == nth($directions, 1) {
+    @return $first_dir_val;
+  } @else if $cur-dir == nth($directions, 2) {
+    @return $second_dir_val;
+  }
+}

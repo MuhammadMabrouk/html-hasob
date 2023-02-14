@@ -1,0 +1,54 @@
+/* Preloader Styles */
+/*------------------*/
+.preloader {
+  position: fixed;
+  z-index: 7000;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: hsl(var(--bg-color-one));
+  display: flex;
+
+  &__loader {
+    --size: 2rem;
+
+    margin: auto;
+    display: block;
+    width: var(--size);
+    height: var(--size);
+    border-top: 4px solid hsl(var(--text-color));
+    border-right: 4px solid transparent;
+    border-radius: 50%;
+    animation: spinner-left 1s linear infinite;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: var(--size);
+      height: var(--size);
+      border-left: 4px solid hsl(var(--main-color-one));
+      border-bottom: 4px solid transparent;
+      border-radius: 50%;
+      animation: spinner-left 0.5s linear infinite reverse;
+    }
+  }
+
+  &.is-done {
+    animation: hidePreloader 0.4s cubic-bezier(0.87, 0, 0.13, 1) forwards;
+
+    @keyframes hidePreloader {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+
+  &:not(.is-done) ~ .loginScreen,
+  &:not(.is-done) ~ #app-inner {
+    visibility: hidden;
+  }
+}

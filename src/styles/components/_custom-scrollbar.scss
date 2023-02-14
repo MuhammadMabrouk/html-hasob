@@ -1,0 +1,22 @@
+/* Custom Scrollbar Styles */
+/*-------------------------*/
+::-webkit-scrollbar {
+  width: 0.5rem;
+
+  &-track {
+    background-color: hsl(var(--bg-color-three));
+  }
+
+  &-thumb {
+    background-color: hsla(var(--text-color), 70%);
+    border-radius: 0.625rem;
+
+    &:hover {
+      background-color: hsl(var(--text-color));
+    }
+  }
+
+  &-track-piece:vertical:end {
+    background-color: hsla(var(--text-color), 20%);
+  }
+}

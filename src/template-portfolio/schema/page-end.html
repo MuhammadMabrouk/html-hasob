@@ -1,0 +1,49 @@
+      <!-- toast notifications -->
+      <ul class="notifications frontNotifications">
+        <transition-group name="notify">
+          <li v-for="notify of frontNotifications"
+            :key="notify.id"
+            :id="notify.id"
+            class="notifications__item show"
+            :class="{[notify.className]: notify.className}">
+            <div :class="['notifications__icon', notify.icon && 'svg-icon']">
+              <span v-if="notify.icon" v-html="notify.icon"></span>
+              <img src="assets/images/icons/success.svg" alt="success" v-if="notify?.className === 'success'">
+              <img src="assets/images/icons/info.svg" alt="info" v-if="notify?.className === 'info'">
+              <img src="assets/images/icons/warning.svg" alt="warning" v-if="notify?.className === 'warning'">
+              <img src="assets/images/icons/error.svg" alt="error" v-if="notify?.className === 'danger'">
+            </div>
+            <span class="notifications__text">{{ notify.msg }}</span>
+            <button class="notifications__dismiss actionBtn" title="${{ index.global.dismiss }}$" @click="dismissNotification(notify.id)">
+              <svg><use href="#mark-error"/></svg>
+            </button>
+          </li>
+        </transition-group>
+      </ul>
+
+      <!-- confirm window -->
+      <div tabindex="-1" class="confirm confirm--close">
+        <div class="confirm__overly" @click="closeConfirmWindow"></div>
+        <div class="confirm__window">
+          <div class="confirm__titleBar">
+            <strong class="confirm__title">{{ confirm?.title }}</strong>
+            <button class="confirm__close actionBtn" title="${{ index.global.close }}$" @click="closeConfirmWindow">
+              <svg><use href="#mark-error"/></svg>
+            </button>
+          </div>
+          <div class="confirm__content">{{ confirm?.msg }}</div>
+          <div class="confirm__buttons">
+            <button class="confirm__button confirm__button--ok confirm__button--fill" @click="confirm?.onOk">{{ confirm?.okText }}</button>
+            <button class="confirm__button confirm__button--cancel" @click="confirm?.onCancel">{{ confirm?.cancelText }}</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ajax loading -->
+      <div class="cursor-loading" v-show="isAjaxLoading"></div>
+
+      <!-- svg icons -->
+      @@include('./components/global-icons/global-icons.template.html')
+    </div>
+  </body>
+</html>

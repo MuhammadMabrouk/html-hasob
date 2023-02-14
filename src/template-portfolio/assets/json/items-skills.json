@@ -1,0 +1,329 @@
+{
+  "skills": {
+    "title": { "en": "My Skills", "ar": "مهاراتي" },
+    "items": [
+      {
+        "id": "skills",
+        "kind": "folder",
+        "title": { "en": "Skills", "ar": "المهارات" },
+        "date": {
+          "year": "2022",
+          "month": "10",
+          "day": "10"
+        },
+        "files": [
+          {
+            "id": "html",
+            "folder": "skills",
+            "kind": "file",
+            "type": "image",
+            "title": { "en": "HTML5", "ar": "HTML5" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/skills/skills/html.png"
+          },
+          {
+            "id": "css3",
+            "folder": "skills",
+            "kind": "file",
+            "type": "image",
+            "title": { "en": "CSS3", "ar": "CSS3" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/skills/skills/css3.png"
+          },
+          {
+            "id": "javascript",
+            "folder": "skills",
+            "kind": "file",
+            "type": "image",
+            "title": { "en": "JavaScript", "ar": "JavaScript" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/skills/skills/javascript.png"
+          },
+          {
+            "id": "typescript",
+            "folder": "skills",
+            "kind": "file",
+            "type": "image",
+            "title": { "en": "Typescript", "ar": "Typescript" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/skills/skills/typescript.png"
+          },
+          {
+            "id": "bootstrap",
+            "folder": "skills",
+            "kind": "file",
+            "type": "image",
+            "title": { "en": "Bootstrap", "ar": "Bootstrap" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/skills/skills/bootstrap.png"
+          },
+          {
+            "id": "sass",
+            "folder": "skills",
+            "kind": "file",
+            "type": "image",
+            "title": { "en": "SASS", "ar": "SASS" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/skills/skills/sass.png"
+          },
+          {
+            "id": "angular",
+            "folder": "skills",
+            "kind": "file",
+            "type": "image",
+            "title": { "en": "Angular", "ar": "Angular" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/skills/skills/angular.png"
+          },
+          {
+            "id": "react",
+            "folder": "skills",
+            "kind": "file",
+            "type": "image",
+            "title": { "en": "React", "ar": "React" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/skills/skills/react.png"
+          },
+          {
+            "id": "vue",
+            "folder": "skills",
+            "kind": "file",
+            "type": "image",
+            "title": { "en": "Vue", "ar": "Vue" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/skills/skills/vue.png"
+          }
+        ]
+      },
+      {
+        "id": "tools",
+        "kind": "folder",
+        "title": { "en": "Tools", "ar": "الأدوات" },
+        "date": {
+          "year": "2022",
+          "month": "10",
+          "day": "10"
+        },
+        "files": [
+          {
+            "id": "npm",
+            "folder": "tools",
+            "kind": "file",
+            "type": "image",
+            "title": { "en": "NPM", "ar": "NPM" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/skills/tools/npm.png"
+          },
+          {
+            "id": "gulp",
+            "folder": "tools",
+            "kind": "file",
+            "type": "image",
+            "title": { "en": "Gulp", "ar": "Gulp" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/skills/tools/gulp.png"
+          },
+          {
+            "id": "webpack",
+            "folder": "tools",
+            "kind": "file",
+            "type": "image",
+            "title": { "en": "Webpack", "ar": "Webpack" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/skills/tools/webpack.png"
+          },
+          {
+            "id": "git",
+            "folder": "tools",
+            "kind": "file",
+            "type": "image",
+            "title": { "en": "Git", "ar": "Git" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/skills/tools/git.png"
+          },
+          {
+            "id": "adobe-photoshop",
+            "folder": "tools",
+            "kind": "file",
+            "type": "image",
+            "title": { "en": "Adobe Photoshop", "ar": "Adobe Photoshop" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/skills/tools/adobe-photoshop.png"
+          },
+          {
+            "id": "adobe-illustrator",
+            "folder": "tools",
+            "kind": "file",
+            "type": "image",
+            "title": { "en": "Adobe Illustrator", "ar": "Adobe Illustrator" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/skills/tools/adobe-illustrator.png"
+          },
+          {
+            "id": "adobe-xd",
+            "folder": "tools",
+            "kind": "file",
+            "type": "image",
+            "title": { "en": "Adobe XD", "ar": "Adobe XD" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/skills/tools/adobe-xd.png"
+          },
+          {
+            "id": "figma",
+            "folder": "tools",
+            "kind": "file",
+            "type": "image",
+            "title": { "en": "Figma", "ar": "Figma" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/skills/tools/figma.png"
+          },
+          {
+            "id": "trello",
+            "folder": "tools",
+            "kind": "file",
+            "type": "image",
+            "title": { "en": "Trello", "ar": "Trello" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/skills/tools/trello.png"
+          },
+          {
+            "id": "slack",
+            "folder": "tools",
+            "kind": "file",
+            "type": "image",
+            "title": { "en": "Slack", "ar": "Slack" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/skills/tools/slack.png"
+          }
+        ]
+      },
+      {
+        "id": "languages",
+        "kind": "folder",
+        "title": { "en": "Languages", "ar": "اللغات" },
+        "date": {
+          "year": "2022",
+          "month": "10",
+          "day": "10"
+        },
+        "files": [
+          {
+            "id": "arabic",
+            "folder": "languages",
+            "kind": "file",
+            "type": "image",
+            "title": { "en": "Arabic", "ar": "العربية" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/skills/languages/saudi.png"
+          },
+          {
+            "id": "english",
+            "folder": "languages",
+            "kind": "file",
+            "type": "image",
+            "title": { "en": "English", "ar": "الإنجليزية" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/skills/languages/united-kingdom.png"
+          },
+          {
+            "id": "french",
+            "folder": "languages",
+            "kind": "file",
+            "type": "image",
+            "title": { "en": "French", "ar": "الفرنسية" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/skills/languages/french.png"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,140 @@
+//------------------------------------------------------------------------------------------/
+// Global Mixins
+//------------------------------------------------------------------------------------------/
+
+// Flex Box Mixin /
+//----------------/
+@mixin flexbox(
+  $display,
+  $align-content,
+  $align-items,
+  $justify-content,
+  $flex-direction,
+  $flex-wrap
+) {
+  // display => values
+  @if $display == flex {
+    display: flex;
+  } @else if $display == inline-flex {
+    display: inline-flex;
+  } @else if $display == none {
+    display: none;
+  } @else if $display == "" {
+  }
+
+  // align-content => values
+  @if $align-content == center {
+    align-content: center;
+  } @else if $align-content == start {
+    align-content: flex-start;
+  } @else if $align-content == end {
+    align-content: flex-end;
+  } @else if $align-content == around {
+    align-content: space-around;
+  } @else if $align-content == between {
+    align-content: space-between;
+  } @else if $align-content == stretch {
+    align-content: stretch;
+  } @else if $align-content == "" {
+  }
+
+  // align-items => values
+  @if $align-items == center {
+    align-items: center;
+  } @else if $align-items == baseline {
+    align-items: baseline;
+  } @else if $align-items == start {
+    align-items: flex-start;
+  } @else if $align-items == end {
+    align-items: flex-end;
+  } @else if $align-items == stretch {
+    align-items: stretch;
+  } @else if $align-items == "" {
+  }
+
+  // justify-content => values
+  @if $justify-content == center {
+    justify-content: center;
+  } @else if $justify-content == start {
+    justify-content: flex-start;
+  } @else if $justify-content == end {
+    justify-content: flex-end;
+  } @else if $justify-content == around {
+    justify-content: space-around;
+  } @else if $justify-content == between {
+    justify-content: space-between;
+  } @else if $justify-content == "" {
+  }
+
+  // flex-direction => values
+  @if $flex-direction == column {
+    flex-direction: column;
+  } @else if $flex-direction == column-reverse {
+    flex-direction: column-reverse;
+  } @else if $flex-direction == row {
+    flex-direction: row;
+  } @else if $flex-direction == row-reverse {
+    flex-direction: row-reverse;
+  } @else if $flex-direction == "" {
+  }
+
+  // flex-wrap => values
+  @if $flex-wrap == wrap {
+    flex-wrap: wrap;
+  } @else if $flex-wrap == wrap-reverse {
+    flex-wrap: wrap-reverse;
+  } @else if $flex-wrap == nowrap {
+    flex-wrap: nowrap;
+  } @else if $flex-wrap == "" {
+  }
+}
+
+// Hide Element Mixin /
+//--------------------/
+@mixin hideElement() {
+  transition: all 0.3s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+// Show Element Mixin /
+//--------------------/
+@mixin showElement() {
+  visibility: visible;
+  opacity: 1;
+}
+
+// Focus Style Mixin /
+//-------------------/
+@mixin focusStyle($type: null, $isInset: null) {
+  & {
+    outline: none;
+  }
+
+  $inset: null;
+  @if $isInset == true {
+    $inset: inset;
+  }
+
+  @if $type == null {
+    .enable-focus-style & {
+      box-shadow: 0 0 0 3px hsla(var(--main-color-two), 70%) $inset;
+    }
+  } @else if $type == "light" {
+    .enable-focus-style & {
+      box-shadow: 0 0 0 3px hsla(var(--light-color), 70%) $inset;
+    }
+  } @else if $type == "dark" {
+    .enable-focus-style & {
+      box-shadow: 0 0 0 3px hsla(var(--dark-color), 70%) $inset;
+    }
+  } @else if $type == "bg" {
+    .enable-focus-style & {
+      box-shadow: 0 0 0 3px hsla(var(--bg-color-one), 70%) $inset;
+    }
+  } @else if $type == "reverse" {
+    .enable-focus-style & {
+      box-shadow: 0 0 0 3px hsla(var(--bg-color-reverse), 70%) $inset;
+    }
+  }
+}

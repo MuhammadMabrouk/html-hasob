@@ -1,0 +1,199 @@
+/* Start Menu Styles */
+/*-------------------*/
+.startMenu {
+  --menu-width: 19rem;
+  --item-height: 2.5rem;
+  --margin-size: 0.5rem;
+
+  width: var(--menu-width);
+
+  .taskbar__popup {
+    width: 100%;
+
+    @include appDir() {
+      #{dirs(left, right)}: 0;
+    }
+  }
+
+  &__subMenu {
+    @media #{$min_992} {
+      width: var(--menu-width);
+
+      @include appDir() {
+        #{dirs(left, right)}: 100%;
+        border-#{dirs(left, right)}: 0.0625rem solid hsl(var(--border-color));
+        transform: translateX(dirs(-1.25rem, 1.25rem));
+      }
+    }
+
+    &__header {
+      justify-content: space-between;
+    }
+
+    &__grid {
+      @include flexbox(flex, "", "", "", "", wrap);
+      padding: 0.5rem 0;
+      gap: 0.5rem;
+    }
+
+    &__grid2 {
+      display: grid;
+      align-items: start;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.25rem;
+      margin: 0 -0.25rem;
+
+      &__btn {
+        @include flexbox(flex, "", "", "", column, "");
+        height: 100%;
+        text-align: center;
+        padding: 0.5rem;
+        border: 0.0625rem solid transparent;
+        border-radius: var(--radius-size);
+        transition-duration: 0.1s;
+
+        &.external {
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0.25rem;
+            right: 0.25rem;
+            height: 1.25rem;
+            width: 1.25rem;
+            background: url("../assets/images/icons/external.svg") center/100%
+              no-repeat;
+          }
+        }
+
+        &:hover,
+        &:focus {
+          background-color: hsla(var(--bg-color-reverse), 10%);
+          border-color: hsla(var(--bg-color-reverse), 25%);
+        }
+      }
+
+      &__icon {
+        @include flexbox(flex, "", center, center, "", "");
+        width: 100%;
+
+        img,
+        svg {
+          display: block;
+          width: 100%;
+          max-width: 3rem;
+          max-height: 3rem;
+        }
+      }
+
+      &__text {
+        display: block;
+        width: 100%;
+        font-size: 0.875rem;
+        margin-top: 1rem;
+      }
+    }
+
+    .settingsForm {
+      --reset-btn-size: var(--control-height) * 0.75;
+
+      .group {
+        @include flexbox(flex, "", center, between, "", wrap);
+        gap: 0.5rem;
+
+        label {
+          margin-bottom: 0;
+        }
+
+        .control {
+          width: calc(100% - ((var(--reset-btn-size)) + 0.5rem));
+        }
+      }
+
+      .resetBtn {
+        img {
+          display: block;
+          height: calc(var(--reset-btn-size));
+          width: calc(var(--reset-btn-size));
+        }
+
+        &:focus {
+          @include focusStyle();
+        }
+      }
+    }
+  }
+
+  &__list {
+    line-height: initial;
+
+    &__item {
+      &:not(:last-of-type) {
+        margin-bottom: 0.25rem;
+      }
+    }
+
+    &__btn {
+      @include flexbox(flex, "", center, "", "", "");
+      height: var(--item-height);
+      width: 100%;
+      border-radius: var(--radius-size);
+
+      &:hover,
+      &:focus {
+        background-color: hsla(var(--text-color), 15%);
+      }
+
+      &.active {
+        background-color: hsla(var(--text-color), 20%);
+      }
+    }
+
+    &__icon {
+      @include flexbox(flex, "", center, center, "", "");
+      height: var(--item-height);
+      width: var(--item-height);
+
+      @include appDir() {
+        margin-#{dirs(right, left)}: var(--margin-size);
+      }
+
+      &__inner {
+        @include flexbox(flex, "", center, center, "", "");
+        height: 1.5rem;
+        width: 1.5rem;
+        font-size: 1.25rem;
+        border-radius: 50%;
+
+        svg {
+          height: 100%;
+          width: 100%;
+        }
+
+        img {
+          display: block;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    &__text {
+      @include flexbox(flex, "", center, between, "", "");
+      flex-grow: 1;
+
+      svg {
+        height: 1.25rem;
+        width: 1.25rem;
+      }
+    }
+  }
+
+  &__separator {
+    margin: var(--margin-size) 0;
+    border-bottom: 0.0625rem solid hsl(var(--border-color));
+    transition: border-color var(--global-transition);
+  }
+}

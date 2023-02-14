@@ -1,0 +1,386 @@
+<div tabindex="0" id="startMenuPopup"
+  class="startMenu taskbar__popup"
+  :class="{ 'popup__open': isStartMenuPopupOpen }"
+  @focusin="taskbarAppsFocusin"
+  @focusout="taskbarAppsFocusout">
+
+  <!-- start menu main content -->
+  <div class="startMenu__main taskbar__popup__main">
+    <div class="startMenu__header taskbar__popup__header">
+      <strong class="taskbar__popup__header__title">${{ index.taskbar.startMenu.title }}$</strong>
+      <button class="actionBtn screen-small" title="${{ index.global.close }}$" @click="closeStartMenuPopup">
+        <svg><use href="#mark-error"/></svg>
+      </button>
+    </div>
+    <div class="startMenu__body taskbar__popup__body">
+      <ul class="startMenu__list">
+
+        <!-- preferences button -->
+        <li class="startMenu__list__item">
+          <button class="startMenu__list__btn" data-menu="preferences" @click="openStartMenuSubMenu">
+            <span class="startMenu__list__icon">
+              <span class="startMenu__list__icon__inner"><svg><use href="#icon-preferences"/></svg></span>
+            </span>
+            <span class="startMenu__list__text">
+              <span>${{ index.taskbar.startMenu.preferences.title }}$</span>
+              <svg class="rtl-mirror"><use href="#arrow-right"/></svg>
+            </span>
+          </button>
+
+          <!-- start menu sub menu -->
+          <div class="startMenu__subMenu taskbar__detailsPopup">
+            <div class="startMenu__subMenu__header taskbar__popup__header">
+              <strong class="taskbar__popup__header__title">${{ index.taskbar.startMenu.preferences.title }}$</strong>
+              <button class="startMenu__subMenu__closeBtn actionBtn" title="${{ index.global.close }}$" @click="closeStartMenuSubMenu">
+                <svg><use href="#mark-error"/></svg>
+              </button>
+            </div>
+
+            <div class="startMenu__subMenu__body taskbar__popup__body">
+              <label>${{ index.taskbar.startMenu.preferences.fileExplorerView.title }}$</label>
+              <form class="settingsForm startMenu__subMenu__grid form-styled"
+                style="--img-height: 4rem; --img-width: 5rem;"
+                @change="changeAppFileExplorerView">
+                <div class="checker checker--radio checker--img">
+                  <div class="checker__btn">
+                    <input id="view-list" class="checker__btn__input" type="radio" name="fileExplorerView" value="view-list" :checked="appSettings?.fileExplorerView == 'view-list'">
+                    <label for="view-list" class="checker__btn__label"></label>
+                    <label for="view-list" class="checker__btn__imgLabel"><svg class="rtl-mirror"><use href="#icon-list"/></svg></label>
+                  </div>
+                  <label for="view-list" class="checker__textLabel">${{ index.taskbar.startMenu.preferences.fileExplorerView.viewList }}$</label>
+                </div>
+                <div class="checker checker--radio checker--img">
+                  <div class="checker__btn">
+                    <input id="view-grid" class="checker__btn__input" type="radio" name="fileExplorerView" value="view-grid" :checked="appSettings?.fileExplorerView == 'view-grid'">
+                    <label for="view-grid" class="checker__btn__label"></label>
+                    <label for="view-grid" class="checker__btn__imgLabel"><svg><use href="#icon-grid"/></svg></label>
+                  </div>
+                  <label for="view-grid" class="checker__textLabel">${{ index.taskbar.startMenu.preferences.fileExplorerView.viewGrid }}$</label>
+                </div>
+              </form>
+              <div class="startMenu__separator"></div>
+              <label>${{ index.taskbar.startMenu.preferences.hourFormat.title }}$</label>
+              <form class="settingsForm startMenu__subMenu__grid form-styled"
+                style="--img-height: 4rem; --img-width: 5rem;"
+                @change="changeAppHourFormat">
+                <div class="checker checker--radio checker--img">
+                  <div class="checker__btn">
+                    <input id="hour12" class="checker__btn__input" type="radio" name="hourFormat" value="hour12" :checked="appSettings?.hourFormat == 'hour12'">
+                    <label for="hour12" class="checker__btn__label"></label>
+                    <label for="hour12" class="checker__btn__imgLabel"><svg><use href="#icon-hour12"/></svg></label>
+                  </div>
+                  <label for="hour12" class="checker__textLabel">${{ index.taskbar.startMenu.preferences.hourFormat.hour12 }}$</label>
+                </div>
+                <div class="checker checker--radio checker--img">
+                  <div class="checker__btn">
+                    <input id="hour24" class="checker__btn__input" type="radio" name="hourFormat" value="hour24" :checked="appSettings?.hourFormat == 'hour24'">
+                    <label for="hour24" class="checker__btn__label"></label>
+                    <label for="hour24" class="checker__btn__imgLabel"><svg><use href="#icon-hour24"/></svg></label>
+                  </div>
+                  <label for="hour24" class="checker__textLabel">${{ index.taskbar.startMenu.preferences.hourFormat.hour24 }}$</label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </li>
+
+        <!-- appearance button -->
+        <li class="startMenu__list__item">
+          <button class="startMenu__list__btn" data-menu="appearance" @click="openStartMenuSubMenu">
+            <span class="startMenu__list__icon">
+              <span class="startMenu__list__icon__inner"><svg><use href="#icon-appearance"/></svg></span>
+            </span>
+            <span class="startMenu__list__text">
+              <span>${{ index.taskbar.startMenu.appearance.title }}$</span>
+              <svg class="rtl-mirror"><use href="#arrow-right"/></svg>
+            </span>
+          </button>
+
+          <!-- start menu sub menu -->
+          <div class="startMenu__subMenu taskbar__detailsPopup">
+            <div class="startMenu__subMenu__header taskbar__popup__header">
+              <strong class="taskbar__popup__header__title">${{ index.taskbar.startMenu.appearance.title }}$</strong>
+              <button class="startMenu__subMenu__closeBtn actionBtn" title="${{ index.global.close }}$" @click="closeStartMenuSubMenu">
+                <svg><use href="#mark-error"/></svg>
+              </button>
+            </div>
+
+            <div class="startMenu__subMenu__body taskbar__popup__body">
+              <label>${{ index.taskbar.startMenu.appearance.mode.title }}$</label>
+              <form class="settingsForm startMenu__subMenu__grid form-styled"
+                style="--img-height: 5rem; --img-width: 7rem;"
+                @change="changeAppMode">
+                <div class="checker checker--radio checker--img">
+                  <div class="checker__btn">
+                    <input id="light" class="checker__btn__input" type="radio" name="mode" value="light" :checked="appSettings?.mode == 'light'">
+                    <label for="light" class="checker__btn__label"></label>
+                    <label for="light" class="checker__btn__imgLabel">
+                      <img src="assets/images/start/light.png" alt="${{ index.taskbar.startMenu.appearance.mode.light }}$">
+                    </label>
+                  </div>
+                  <label for="light" class="checker__textLabel">${{ index.taskbar.startMenu.appearance.mode.light }}$</label>
+                </div>
+                <div class="checker checker--radio checker--img">
+                  <div class="checker__btn">
+                    <input id="dark" class="checker__btn__input" type="radio" name="mode" value="dark" :checked="appSettings?.mode == 'dark'">
+                    <label for="dark" class="checker__btn__label"></label>
+                    <label for="dark" class="checker__btn__imgLabel">
+                      <img src="assets/images/start/dark.png" alt="${{ index.taskbar.startMenu.appearance.mode.dark }}$">
+                    </label>
+                  </div>
+                  <label for="dark" class="checker__textLabel">${{ index.taskbar.startMenu.appearance.mode.dark }}$</label>
+                </div>
+              </form>
+              <div class="startMenu__separator"></div>
+              <form class="settingsForm form-styled" @change="changeAppColor">
+                <div class="group">
+                  <label for="primary">${{ index.taskbar.startMenu.appearance.colors.primary.title }}$</label>
+                  <div class="control">
+                    <input id="primary" type="color" name="primary">
+                  </div>
+                  <button class="resetBtn"
+                    type="button"
+                    title="${{ index.global.reset }}$"
+                    data-title="${{ index.taskbar.startMenu.appearance.colors.primary.confirm.title }}$"
+                    data-msg="${{ index.taskbar.startMenu.appearance.colors.primary.confirm.msg }}$"
+                    data-ok-text="${{ index.taskbar.startMenu.appearance.colors.primary.confirm.okText }}$"
+                    data-cancel-text="${{ index.taskbar.startMenu.appearance.colors.primary.confirm.cancelText }}$"
+                    @click="resetAppGlobalSetting($event, 'Color', ['primary'])">
+                    <img src="assets/images/icons/reset.svg" alt="${{ index.global.reset }}$">
+                  </button>
+                </div>
+                <div class="group">
+                  <label for="secondary">${{ index.taskbar.startMenu.appearance.colors.secondary.title }}$</label>
+                  <div class="control">
+                    <input id="secondary" type="color" name="secondary">
+                  </div>
+                  <button class="resetBtn"
+                    type="button"
+                    title="${{ index.global.reset }}$"
+                    data-title="${{ index.taskbar.startMenu.appearance.colors.secondary.confirm.title }}$"
+                    data-msg="${{ index.taskbar.startMenu.appearance.colors.secondary.confirm.msg }}$"
+                    data-ok-text="${{ index.taskbar.startMenu.appearance.colors.secondary.confirm.okText }}$"
+                    data-cancel-text="${{ index.taskbar.startMenu.appearance.colors.secondary.confirm.cancelText }}$"
+                    @click="resetAppGlobalSetting($event, 'Color', ['secondary'])">
+                    <img src="assets/images/icons/reset.svg" alt="${{ index.global.reset }}$">
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </li>
+
+        <!-- typography button -->
+        <li class="startMenu__list__item">
+          <button class="startMenu__list__btn" data-menu="typography" @click="openStartMenuSubMenu">
+            <span class="startMenu__list__icon">
+              <span class="startMenu__list__icon__inner"><svg><use href="#icon-typography"/></svg></span>
+            </span>
+            <span class="startMenu__list__text">
+              <span>${{ index.taskbar.startMenu.typography.title }}$</span>
+              <svg class="rtl-mirror"><use href="#arrow-right"/></svg>
+            </span>
+          </button>
+
+          <!-- start menu sub menu -->
+          <div class="startMenu__subMenu taskbar__detailsPopup">
+            <div class="startMenu__subMenu__header taskbar__popup__header">
+              <strong class="taskbar__popup__header__title">${{ index.taskbar.startMenu.typography.title }}$</strong>
+              <button class="startMenu__subMenu__closeBtn actionBtn" title="${{ index.global.close }}$" @click="closeStartMenuSubMenu">
+                <svg><use href="#mark-error"/></svg>
+              </button>
+            </div>
+
+            <div class="startMenu__subMenu__body taskbar__popup__body">
+              <form class="settingsForm form-styled">
+                <div class="group">
+                  <label>${{ index.taskbar.startMenu.typography.fontfamily.title }}$</label>
+                  <div class="control">
+                    <webrouk-custom-select
+                      id="google-fonts-select"
+                      search-placeholder="${{ index.global.search }}$"
+                      no-results="${{ index.global.noResults }}$">
+                      <select name="fontfamily" @change="changeAppFontfamily">
+                        <option value="">${{ index.taskbar.startMenu.typography.fontfamily.placeholder }}$</option>
+                        <option v-for="font in googleFonts"
+                          :key="font.code"
+                          :value="font.code"
+                          :selected="font.code === renderedFontfamily"
+                        >{{ font.family }}</option>
+                      </select>
+                    </webrouk-custom-select>
+                  </div>
+                  <button class="resetBtn"
+                    type="button"
+                    title="${{ index.global.reset }}$"
+                    data-title="${{ index.taskbar.startMenu.typography.fontfamily.confirm.title }}$"
+                    data-msg="${{ index.taskbar.startMenu.typography.fontfamily.confirm.msg }}$"
+                    data-ok-text="${{ index.taskbar.startMenu.typography.fontfamily.confirm.okText }}$"
+                    data-cancel-text="${{ index.taskbar.startMenu.typography.fontfamily.confirm.cancelText }}$"
+                    @click="resetAppGlobalSetting($event, 'Typography', ['fontfamily'])">
+                    <img src="assets/images/icons/reset.svg" alt="${{ index.global.reset }}$">
+                  </button>
+                </div>
+                <div class="group">
+                  <label>${{ index.taskbar.startMenu.typography.fontsize.title }}$</label>
+                  <div class="control">
+                    <webrouk-custom-number
+                      disabled="true"
+                      percent="true"
+                      step="10"
+                      min="60"
+                      max="150"
+                      :value="renderedFontsize || 100">
+                      <input type="hidden" name="fontsize" @change="changeAppFontsize">
+                    </webrouk-custom-number>
+                  </div>
+                  <button class="resetBtn"
+                    type="button"
+                    title="${{ index.global.reset }}$"
+                    data-title="${{ index.taskbar.startMenu.typography.fontsize.confirm.title }}$"
+                    data-msg="${{ index.taskbar.startMenu.typography.fontsize.confirm.msg }}$"
+                    data-ok-text="${{ index.taskbar.startMenu.typography.fontsize.confirm.okText }}$"
+                    data-cancel-text="${{ index.taskbar.startMenu.typography.fontsize.confirm.cancelText }}$"
+                    @click="resetAppGlobalSetting($event, 'Typography', ['fontsize'])">
+                    <img src="assets/images/icons/reset.svg" alt="${{ index.global.reset }}$">
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </li>
+
+        <!-- games button -->
+        <li class="startMenu__list__item">
+          <button class="startMenu__list__btn" data-menu="games" @click="openStartMenuSubMenu">
+            <span class="startMenu__list__icon">
+              <span class="startMenu__list__icon__inner"><svg><use href="#icon-gamepad"/></svg></span>
+            </span>
+            <span class="startMenu__list__text">
+              <span>${{ index.taskbar.startMenu.games.title }}$</span>
+              <svg class="rtl-mirror"><use href="#arrow-right"/></svg>
+            </span>
+          </button>
+
+          <!-- start menu sub menu -->
+          <div class="startMenu__subMenu taskbar__detailsPopup">
+            <div class="startMenu__subMenu__header taskbar__popup__header">
+              <strong class="taskbar__popup__header__title">${{ index.taskbar.startMenu.games.title }}$</strong>
+              <button class="startMenu__subMenu__closeBtn actionBtn" title="${{ index.global.close }}$" @click="closeStartMenuSubMenu">
+                <svg><use href="#mark-error"/></svg>
+              </button>
+            </div>
+
+            <div class="startMenu__subMenu__body taskbar__popup__body">
+              <div class="startMenu__subMenu__grid2">
+                <button class="startMenu__subMenu__grid2__btn"
+                  data-win-id="ticTacToeWindow"
+                  title="${{ index.taskbar.startMenu.games.ticTacToe }}$"
+                  @click="openTicTacToeWindow">
+                  <span class="startMenu__subMenu__grid2__icon window__icon" v-html="ticTacToeGameIcon"></span>
+                  <span class="startMenu__subMenu__grid2__text window__title">${{ index.taskbar.startMenu.games.ticTacToe }}$</span>
+                </button>
+                <button class="startMenu__subMenu__grid2__btn"
+                  data-win-id="memoryCardWindow"
+                  title="${{ index.taskbar.startMenu.games.memoryCard }}$"
+                  @click="openMemoryCardWindow">
+                  <span class="startMenu__subMenu__grid2__icon window__icon" v-html="memoryCardGameIcon"></span>
+                  <span class="startMenu__subMenu__grid2__text window__title">${{ index.taskbar.startMenu.games.memoryCard }}$</span>
+                </button>
+                <button class="startMenu__subMenu__grid2__btn"
+                  data-win-id="snakeWindow"
+                  title="${{ index.taskbar.startMenu.games.snake }}$"
+                  @click="openSnakeWindow">
+                  <span class="startMenu__subMenu__grid2__icon window__icon" v-html="snakeGameIcon"></span>
+                  <span class="startMenu__subMenu__grid2__text window__title">${{ index.taskbar.startMenu.games.snake }}$</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- contact button -->
+        <li class="startMenu__list__item">
+          <button class="startMenu__list__btn" data-menu="contact" @click="openStartMenuSubMenu">
+            <span class="startMenu__list__icon">
+              <span class="startMenu__list__icon__inner">
+                <svg><use href="#icon-envelope"/></svg>
+              </span>
+            </span>
+            <span class="startMenu__list__text">
+              <span>${{ index.taskbar.startMenu.contact.title }}$</span>
+              <svg class="rtl-mirror"><use href="#arrow-right"/></svg>
+            </span>
+          </button>
+
+          <!-- start menu sub menu -->
+          <div class="startMenu__subMenu taskbar__detailsPopup">
+            <div class="startMenu__subMenu__header taskbar__popup__header">
+              <strong class="taskbar__popup__header__title">${{ index.taskbar.startMenu.contact.title }}$</strong>
+              <button class="startMenu__subMenu__closeBtn actionBtn" title="${{ index.global.close }}$" @click="closeStartMenuSubMenu">
+                <svg><use href="#mark-error"/></svg>
+              </button>
+            </div>
+
+            <div class="startMenu__subMenu__body taskbar__popup__body">
+              <div class="startMenu__subMenu__grid2">
+                <button class="startMenu__subMenu__grid2__btn"
+                  data-win-id="emailWindow"
+                  title="${{ index.taskbar.startMenu.contact.email }}$"
+                  @click="openEmailWindow">
+                  <span class="startMenu__subMenu__grid2__icon window__icon" v-html="emailIcon"></span>
+                  <span class="startMenu__subMenu__grid2__text window__title">${{ index.taskbar.startMenu.contact.email }}$</span>
+                </button>
+                <a class="startMenu__subMenu__grid2__btn external"
+                  v-for="link in socialLinks" :key="link.id"
+                  target="_blank" rel="noopener"
+                  :href="link.url"
+                  :title="link.title['${{ index.i18n.lang.code }}$']">
+                  <span class="startMenu__subMenu__grid2__icon"><svg><use :href="'#social-' + link.id"/></svg></span>
+                  <span class="startMenu__subMenu__grid2__text">{{ link.title['${{ index.i18n.lang.code }}$'] }}</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="startMenu__separator"></div>
+      <ul class="startMenu__list">
+
+        <!-- restart button -->
+        <li class="startMenu__list__item">
+          <button class="startMenu__list__btn"
+            data-title="${{ index.taskbar.startMenu.actions.restart.confirm.title }}$"
+            data-msg="${{ index.taskbar.startMenu.actions.restart.confirm.msg }}$"
+            data-ok-text="${{ index.taskbar.startMenu.actions.restart.confirm.okText }}$"
+            data-cancel-text="${{ index.taskbar.startMenu.actions.restart.confirm.cancelText }}$"
+            @click="restartWindow">
+            <span class="startMenu__list__icon">
+              <span class="startMenu__list__icon__inner">
+                <img src="assets/images/icons/restart.svg" alt="${{ index.taskbar.startMenu.actions.restart.title }}$">
+              </span>
+            </span>
+            <span class="startMenu__list__text">${{ index.taskbar.startMenu.actions.restart.title }}$</span>
+          </button>
+        </li>
+
+        <!-- logout button -->
+        <li class="startMenu__list__item">
+          <button class="startMenu__list__btn"
+            data-title="${{ index.taskbar.startMenu.actions.logout.confirm.title }}$"
+            data-msg="${{ index.taskbar.startMenu.actions.logout.confirm.msg }}$"
+            data-ok-text="${{ index.taskbar.startMenu.actions.logout.confirm.okText }}$"
+            data-cancel-text="${{ index.taskbar.startMenu.actions.logout.confirm.cancelText }}$"
+            @click="logoutWindow">
+            <span class="startMenu__list__icon">
+              <span class="startMenu__list__icon__inner">
+                <img src="assets/images/icons/power-off.svg" alt="${{ index.taskbar.startMenu.actions.logout.title }}$">
+              </span>
+            </span>
+            <span class="startMenu__list__text">${{ index.taskbar.startMenu.actions.logout.title }}$</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

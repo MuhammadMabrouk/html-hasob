@@ -1,0 +1,38 @@
+<transition-group name="window">
+  <div tabindex="0" class="textViewerWindow appsWindow appsWindow__open draggable mode-transition-bg"
+    v-for="win in textViewerWindows" :key="win.id"
+    :id="win.id"
+    @focusin="taskbarAppsFocusin"
+    @focusout="taskbarAppsFocusout">
+  
+    <!-- window title bar -->
+    <div class="appsWindow__titleBar dragger">
+      <strong class="appsWindow__titleBar__title" :title="win.title">
+        <span class="appsWindow__titleBar__icon">
+          <img src="assets/images/desktop/file-text.svg" alt="text viewer" draggable="false">
+        </span>
+        <span class="appsWindow__titleBar__text">{{ win.title }}</span>
+      </strong>
+      <ul class="appsWindow__titleBar__actionBtns" @mousedown.stop @touchstart.stop>
+        <li class="appsWindow__titleBar__actionItem">
+          <button class="appsWindow__titleBar__actionBtn actionBtn" title="${{ index.components.window.actionBtns.minimize }}$" @click="textViewerMinimizeWindow(win.id)">
+            <svg><use href="#mark-minimize"/></svg>
+          </button>
+        </li>
+        <li class="appsWindow__titleBar__actionItem maximizeBtn">
+          <button class="appsWindow__titleBar__actionBtn actionBtn" title="${{ index.components.window.actionBtns.maximize }}$" @click="maximizeWindow">
+            <svg><use href="#mark-maximize"/></svg>
+          </button>
+        </li>
+        <li class="appsWindow__titleBar__actionItem">
+          <button class="appsWindow__titleBar__actionBtn actionBtn" title="${{ index.components.window.actionBtns.exit }}$" @click="textViewerRemoveWindow(win.id)">
+            <svg><use href="#mark-error"/></svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+  
+    <!-- window workspace -->
+    <div class="appsWindow__workspace" v-html="win.content"></div>
+  </div>
+</transition-group>

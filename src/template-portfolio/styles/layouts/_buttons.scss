@@ -1,0 +1,82 @@
+/*-----------------------------------------------------------------------------------------*/
+/* 2. Buttons Styles */
+/*-----------------------------------------------------------------------------------------*/
+.w-btn {
+  --btn-height: 2.75rem;
+
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+  height: var(--btn-height);
+  line-height: var(--btn-height);
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0 1.5rem;
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.25s;
+
+  &:focus {
+    @include focusStyle();
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+  }
+
+  &::before {
+    z-index: -2;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  &::after {
+    z-index: -1;
+    width: 0;
+  }
+
+  &--s1 {
+    &::after {
+      bottom: 0;
+      height: 100%;
+      transition: all 0.25s;
+
+      @include appDir() {
+        #{dirs(right, left)}: 0;
+      }
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+
+        @include appDir() {
+          #{dirs(left, right)}: 0;
+        }
+      }
+    }
+  }
+
+  &--primary {
+    color: hsl(var(--light-color));
+
+    &::before {
+      background-color: hsl(var(--primary-color));
+    }
+
+    &::after {
+      background-color: hsl(var(--bg-color-reverse));
+    }
+
+    &:hover {
+      color: hsl(var(--primary-color));
+    }
+  }
+}

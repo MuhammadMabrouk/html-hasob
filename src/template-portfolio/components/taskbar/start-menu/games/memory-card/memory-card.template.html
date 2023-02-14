@@ -1,0 +1,56 @@
+<div tabindex="0"
+  id="memoryCardWindow"
+  class="memoryCardWindow appsWindow draggable mode-transition-bg"
+  :class="isMemoryCardWindowOpen && 'appsWindow__open'"
+  @focusin="taskbarAppsFocusin"
+  @focusout="taskbarAppsFocusout">
+
+  <!-- window title bar -->
+  <div class="appsWindow__titleBar dragger">
+    <strong class="appsWindow__titleBar__title" title="${{ index.components.window.memoryCard.title }}$">
+      <span class="appsWindow__titleBar__icon" v-html="memoryCardGameIcon"></span>
+      <span class="appsWindow__titleBar__text">${{ index.components.window.memoryCard.title }}$</span>
+    </strong>
+    <ul class="appsWindow__titleBar__actionBtns" @mousedown.stop @touchstart.stop>
+      <li class="appsWindow__titleBar__actionItem minimizeBtn">
+        <button class="appsWindow__titleBar__actionBtn actionBtn" title="${{ index.components.window.actionBtns.minimize }}$" @click="closeWindow($event, true)">
+          <svg><use href="#mark-minimize"/></svg>
+        </button>
+      </li>
+      <li class="appsWindow__titleBar__actionItem maximizeBtn">
+        <button class="appsWindow__titleBar__actionBtn actionBtn" title="${{ index.components.window.actionBtns.maximize }}$" @click="maximizeWindow">
+          <svg><use href="#mark-maximize"/></svg>
+        </button>
+      </li>
+      <li class="appsWindow__titleBar__actionItem exitBtn">
+        <button class="appsWindow__titleBar__actionBtn actionBtn" title="${{ index.components.window.actionBtns.exit }}$" @click="closeWindow">
+          <svg><use href="#mark-error"/></svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- window workspace -->
+  <div class="memoryCardWindow__workspace appsWindow__workspace">
+    <div class="memoryCardWindow__content">
+      <div class="memoryCardWindow__controls">
+        <div class="memoryCardWindow__btn memoryCardWindow__btn--control">${{ index.components.window.memoryCard.matches }}$: {{ memoryCardMatches }}</div>
+        <div class="memoryCardWindow__btn memoryCardWindow__btn--control">${{ index.components.window.memoryCard.turns }}$: {{ memoryCardTurns }}</div>
+        <button class="memoryCardWindow__btn memoryCardWindow__btn--restart" title="${{ index.global.restart }}$" @click="memoryCardRestart">
+          <img src="assets/images/icons/reset.svg" alt="${{ index.global.reset }}$">
+        </button>
+      </div>
+      <div class="memoryCardWindow__boxes" data-game-won-msg="${{ index.components.window.memoryCard.gameWon }}$">
+        <button class="memoryCardWindow__btn memoryCardWindow__btn--card"
+          v-for="(card, index) in memoryCardItems" :key="index"
+          :data-name="card"
+          @click="memoryCardFlipCard">
+          <span class="memoryCardWindow__btn__content">
+            <span class="memoryCardWindow__btn__front"><svg><use href="#mark-question"/></svg></span>
+            <span class="memoryCardWindow__btn__back"><img :src="'assets/images/games/memory-card/' + card + '.svg'" :alt="card"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

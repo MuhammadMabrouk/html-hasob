@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="${{ index.i18n.lang.code }}$" dir="${{ index.i18n.dir }}$">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creative HTML Template for Portfolio Websites.">
+
+    <!-- title of the browser tab -->
+    <title>${{ index.browserTitle }}$</title>
+
+    <!-- favicon -->
+    <link rel="icon" href="assets/favicon.ico">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link id="ff-placeholder" rel="stylesheet" href="#" data-url="https://fonts.googleapis.com/css2?family=ff-placeholder:wght@400;700&display=swap">
+
+    <!-- css libraries file -->
+    <link rel="stylesheet" href="styles/libraries.min.css">
+
+    <!-- main style file -->
+    <link rel="stylesheet" href="styles/style.min.css">
+
+    <!-- js plugins file -->
+    <script src="scripts/plugins.min.js" defer></script>
+
+    <!-- main script file -->
+    <script src="scripts/script.min.js" defer></script>
+  </head>
+  <body id="app"
+    data-mode="light"
+    data-colors='{
+      "primary-h": "223",
+      "primary-s": "100%",
+      "primary-l": "56%",
+      "secondary-h": "25",
+      "secondary-s": "75%",
+      "secondary-l": "47%"
+    }'
+    data-fontfamily="${{ index.i18n.font.code }}$"
+    data-fontsize="16"
+    data-hour-format="hour12"
+    data-locales="${{ index.i18n.locales }}$"
+    data-week-start-day="${{ index.i18n.weekStartDay }}$"
+    data-file-explorer-view="view-list"
+    data-url-desktop-items="assets/json/items-desktop.json"
+    data-url-google-fonts="assets/json/items-google-fonts.json"
+    data-url-social-links="assets/json/items-social.json"
+    data-url-calendar-events="assets/json/items-calendar-events.json"
+    data-wallpaper-desktop="assets/images/wallpaper-desktop.jpg"
+    data-wallpaper-login="assets/images/wallpaper-login.jpg"
+    data-user-name="${{ index.taskbar.startMenu.actions.login.userName }}$"
+    data-user-picture="assets/images/user-picture.jpg"
+    data-welcome-msg="${{ index.welcomeMsg }}$"
+  >
+
+    <!-- start preloader-->
+    @@include('./components/preloader/preloader.template.html')
+    <!-- end preloader-->
+
+    <!-- login screen -->
+    @@include('./components/login-screen/login-screen.template.html')
+
+    <div id="app-inner"
+      :class="{'enable-focus-style': isAnyFocus}"
+      @click="isAnyFocus = false"
+      @keyup.tab="isAnyFocus = true">

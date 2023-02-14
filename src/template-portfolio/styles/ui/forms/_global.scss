@@ -1,0 +1,195 @@
+/* Global Forms Styles */
+.form-styled {
+  .group {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    label {
+      display: block;
+      width: 100%;
+      color: hsl(var(--text-color));
+      line-height: 1.5rem;
+      font-size: 0.875rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .control {
+      position: relative;
+
+      &.has-prefix-icon {
+        input:not([type="radio"]):not([type="checkbox"]):not([type="file"]) {
+          @include appDir() {
+            padding-#{dirs(left, right)}: var(--control-height);
+          }
+        }
+
+        textarea {
+          text-indent: 1.625rem;
+        }
+
+        .prefix-icon {
+          @include flexbox(flex, "", center, center, "", "");
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: var(--control-height);
+          transition: all 0.3s ease-in-out;
+
+          @include appDir() {
+            #{dirs(left, right)}: 0;
+          }
+
+          &.fa {
+            font-size: 1.125rem;
+          }
+
+          svg {
+            height: 1.25rem;
+            width: 1.25rem;
+          }
+        }
+
+        textarea + .prefix-icon {
+          top: 0.6875rem;
+          transform: translateY(0);
+        }
+      }
+
+      input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):not([type="color"]),
+      textarea,
+      webrouk-custom-number::part(input) {
+        display: block;
+        width: 100%;
+        height: var(--control-height);
+        background-color: hsl(var(--inputs-bg-color));
+        padding: {
+          left: 0.875rem;
+          right: 0.875rem;
+        }
+        border: 0.0625rem solid;
+        outline: 0;
+        border-radius: var(--radius-size);
+        box-shadow: var(--inset-shadow);
+        transition: all 0.3s ease-in-out;
+
+        &:not(:focus) {
+          color: inherit;
+          border-color: hsl(var(--inputs-bg-color));
+        }
+      }
+
+      input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):not([type="color"]),
+      textarea {
+        &:disabled {
+          background-color: hsl(var(--inputs-disabled-bg-color));
+          cursor: not-allowed;
+        }
+
+        &:focus {
+          color: hsl(var(--main-color-one));
+          border-color: hsl(var(--main-color-one));
+          @include focusStyle();
+
+          ~ .prefix-icon {
+            color: hsl(var(--main-color-one));
+          }
+        }
+
+        &.invalid {
+          color: hsl(var(--danger-color)) !important;
+          border-color: hsl(var(--danger-color)) !important;
+
+          ~ .prefix-icon {
+            color: hsl(var(--danger-color));
+          }
+        }
+
+        &.valid {
+          color: hsl(var(--success-color)) !important;
+          border-color: hsl(var(--success-color)) !important;
+
+          ~ .prefix-icon {
+            color: hsl(var(--success-color));
+          }
+        }
+      }
+
+      input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):not([type="color"]) {
+        line-height: 1;
+      }
+
+      input[type="email"],
+      input[type="tel"] {
+        direction: ltr;
+
+        &::placeholder {
+          @include appDir() {
+            text-align: dirs(null, end);
+          }
+        }
+      }
+
+      input[type="color"] {
+        display: block;
+        height: 2.5rem;
+        width: 2.5rem;
+        background-color: transparent;
+        padding: 0;
+        border: 0;
+        border-radius: var(--radius-size);
+        cursor: inherit;
+        appearance: none;
+
+        &::-webkit-color-swatch {
+          border: 0;
+          border-radius: var(--radius-size);
+        }
+
+        &::-moz-color-swatch {
+          border: 0;
+          border-radius: var(--radius-size);
+        }
+
+        &::-webkit-color-swatch-wrapper {
+          padding: 0;
+        }
+
+        &:focus {
+          @include focusStyle();
+        }
+      }
+
+      textarea {
+        min-height: 7.5rem;
+        white-space: normal;
+        padding: {
+          top: 0.625rem;
+          bottom: 0.625rem;
+        }
+        resize: vertical;
+      }
+
+      > .fa {
+        &:not(.prefix-icon) {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 1.125rem;
+
+          &.action-icon {
+            cursor: pointer;
+
+            @include appDir() {
+              #{dirs(right, left)}: 1.125rem;
+            }
+          }
+        }
+      }
+
+      .errors-msgs {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+<div tabindex="0" id="calendarPopup"
+  class="calendar taskbar__popup"
+  :class="{ 'popup__open': isCalendarPopupOpen }"
+  @focusin="taskbarAppsFocusin"
+  @focusout="taskbarAppsFocusout">
+
+  <!-- calendar main content -->
+  <div class="calendar__main taskbar__popup__main">
+    <div class="calendar__header taskbar__popup__header screen-small">
+      <strong class="taskbar__popup__header__title">${{ index.taskbar.calendar.title }}$</strong>
+      <button class="actionBtn" title="${{ index.global.close }}$" @click="closeCalendarPopup">
+        <svg><use href="#mark-error"/></svg>
+      </button>
+    </div>
+    <div class="calendar__header taskbar__popup__header second-header">
+      <div>
+        <button class="actionBtn prev__year rtl-mirror" title="${{ index.taskbar.calendar.date.prevYear }}$" @click="calendarGoToPrevYear">
+          <svg><use href="#arrow-left-double"/></svg>
+        </button>
+        <button class="actionBtn prev__month rtl-mirror" title="${{ index.taskbar.calendar.date.prevMonth }}$" @click="calendarGoToPrevMonth">
+          <svg><use href="#arrow-left"/></svg>
+        </button>
+      </div>
+      <strong class="taskbar__popup__header__title">{{ calendarDate }}</strong>
+      <div>
+        <button class="actionBtn next__month rtl-mirror" title="${{ index.taskbar.calendar.date.nextMonth }}$" @click="calendarGoToNextMonth">
+          <svg><use href="#arrow-right"/></svg>
+        </button>
+        <button class="actionBtn next__year rtl-mirror" title="${{ index.taskbar.calendar.date.nextYear }}$" @click="calendarGoToNextYear">
+          <svg><use href="#arrow-right-double"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="calendar__body taskbar__popup__body">
+      <div class="calendar__weekdays">
+        <div class="calendar__weekdays__day"
+          v-for="weekday in calendarWeekdaysSorted"
+          :title="weekday.long['${{ index.i18n.lang.code }}$']">
+          {{ weekday.short["${{ index.i18n.lang.code }}$"] }}
+        </div>
+      </div>
+      <div class="calendar__days"></div>
+    </div>
+  </div>
+
+  <!-- calendar events -->
+  <div id="calendar-events"
+    class="calendar__events taskbar__detailsPopup"
+    :class="isCalendarPopupEventsOpen && 'detailsPopup__open'">
+    <div class="calendar__header taskbar__popup__header">
+      <strong class="taskbar__popup__header__title">${{ index.taskbar.calendar.events.title }}$</strong>
+      <button class="calendar__events__closeBtn actionBtn" title="${{ index.global.close }}$" @click="closeCalendarEvents">
+        <svg><use href="#mark-error"/></svg>
+      </button>
+    </div>
+
+    <div class="calendar__body taskbar__popup__body">
+      <ul class="calendar__events__list">
+        <template v-if="todayEvents && todayEvents.length">
+          <li class="calendar__events__item"
+            v-for="(event, index) in todayEvents"
+            :key="event.title.en"
+            :style="'--animation-order: ' + (index + 1)">
+            <button class="calendar__events__linked" v-if="event.path" @click="goToCalendarEvent(event.path)">
+              <span class="calendar__events__linked__title">{{ event.title["${{ index.i18n.lang.code }}$"] }}</span>
+              <span class="calendar__events__linked__period" v-if="event.time.from && event.time.to">
+                {{ formattedTime(event.time.from) }} - {{ formattedTime(event.time.to) }}
+              </span>
+              <svg><use href="#arrow-right"/></svg>
+            </button>
+            <div class="calendar__events__notLinked" v-else>
+              <span class="calendar__events__linked__title">{{ event.title["${{ index.i18n.lang.code }}$"] }}</span>
+              <span class="calendar__events__linked__period" v-if="event.time.from && event.time.to">
+                {{ formattedTime(event.time.from) }} - {{ formattedTime(event.time.to) }}
+              </span>
+            </div>
+          </li>
+        </template>
+        <li v-else class="calendar__events__item">
+          <div class="calendar__events__notLink">${{ index.taskbar.calendar.events.noEventsMsg }}$</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

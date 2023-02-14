@@ -1,0 +1,108 @@
+<div tabindex="0"
+  id="emailWindow"
+  class="emailWindow appsWindow draggable mode-transition-bg"
+  :class="isEmailWindowOpen && 'appsWindow__open'"
+  @focusin="taskbarAppsFocusin"
+  @focusout="taskbarAppsFocusout">
+
+  <!-- window title bar -->
+  <div class="appsWindow__titleBar dragger">
+    <strong class="appsWindow__titleBar__title" title="${{ index.components.window.email.title }}$">
+      <span class="appsWindow__titleBar__icon" v-html="emailIcon"></span>
+      <span class="appsWindow__titleBar__text">${{ index.components.window.email.title }}$</span>
+    </strong>
+    <ul class="appsWindow__titleBar__actionBtns" @mousedown.stop @touchstart.stop>
+      <li class="appsWindow__titleBar__actionItem minimizeBtn">
+        <button class="appsWindow__titleBar__actionBtn actionBtn" title="${{ index.components.window.actionBtns.minimize }}$" @click="closeWindow($event, true)">
+          <svg><use href="#mark-minimize"/></svg>
+        </button>
+      </li>
+      <li class="appsWindow__titleBar__actionItem maximizeBtn">
+        <button class="appsWindow__titleBar__actionBtn actionBtn" title="${{ index.components.window.actionBtns.maximize }}$" @click="maximizeWindow">
+          <svg><use href="#mark-maximize"/></svg>
+        </button>
+      </li>
+      <li class="appsWindow__titleBar__actionItem exitBtn">
+        <button class="appsWindow__titleBar__actionBtn actionBtn" title="${{ index.components.window.actionBtns.exit }}$" @click="closeWindow">
+          <svg><use href="#mark-error"/></svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- window workspace -->
+  <div class="emailWindow__workspace appsWindow__workspace">
+    <form id="contactForm" class="emailWindow__form form-styled"
+      action="contact_form.php"
+      data-success-msg="${{ index.toastNotifications.messageSent }}$"
+      data-err-msg="${{ index.toastNotifications.oopsSomethingWrong }}$">
+      <div class="group">
+        <div class="control has-prefix-icon">
+          <input id="name" type="text"
+            name="name"
+            placeholder="${{ index.components.window.email.form.name }}$"
+            minlength="3"
+            required>
+          <span class="prefix-icon"><svg><use href="#icon-user"/></svg></span>
+
+          <!-- validation errors messages -->
+          <div class="errors-msgs">
+            <input class="required" type="hidden" value="${{ index.components.window.email.form.name }}$ ${{ index.toastNotifications.formsValidation.isRequired }}$">
+            <input class="minLength" type="hidden" value="${{ index.components.window.email.form.name }}$ ${{ index.toastNotifications.formsValidation.mustBeAtLeast }}$ ${{ index.numbers.3 }}$ ${{ index.toastNotifications.formsValidation.characters }}$">
+          </div>
+        </div>
+      </div>
+      <div class="group">
+        <div class="control has-prefix-icon">
+          <input id="email" class="ltr-dir"
+            type="email"
+            inputmode="email"
+            name="email"
+            placeholder="${{ index.components.window.email.form.email }}$"
+            required>
+          <span class="prefix-icon"><svg><use href="#icon-envelope"/></svg></span>
+
+          <!-- validation errors messages -->
+          <div class="errors-msgs">
+            <input class="required" type="hidden" value="${{ index.components.window.email.form.email }}$ ${{ index.toastNotifications.formsValidation.isRequired }}$">
+            <input class="invalid" type="hidden" value="${{ index.toastNotifications.formsValidation.enterValidEmail }}$">
+          </div>
+        </div>
+      </div>
+      <div class="group phone-number">
+        <div class="control has-prefix-icon">
+          <input id="phoneNumber"
+            type="tel"
+            inputmode="tel"
+            name="phone"
+            placeholder="${{ index.components.window.email.form.phone }}$">
+          <span class="prefix-icon"><svg><use href="#icon-phone"/></svg></span>
+
+          <!-- validation errors messages -->
+          <div class="errors-msgs">
+            <input class="invalid" type="hidden" value="${{ index.toastNotifications.formsValidation.enterValidPhone }}$">
+          </div>
+        </div>
+      </div>
+      <div class="group message">
+        <div class="control has-prefix-icon">
+          <textarea id="message"
+            name="message"
+            placeholder="${{ index.components.window.email.form.message }}$"
+            required></textarea>
+          <span class="prefix-icon"><svg><use href="#icon-chat"/></svg></span>
+
+          <!-- validation errors messages -->
+          <div class="errors-msgs">
+            <input class="required" type="hidden" value="${{ index.components.window.email.form.message }}$ ${{ index.toastNotifications.formsValidation.isRequired }}$">
+          </div>
+        </div>
+      </div>
+      <div class="group">
+        <div class="control">
+          <button class="submit-btn w-btn w-btn--s1 w-btn--primary" type="button" @click="contactFormValidation">${{ index.components.window.email.form.submitBtn }}$</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

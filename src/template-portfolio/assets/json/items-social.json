@@ -1,0 +1,74 @@
+{
+  "socialLinks": [
+    {
+      "id": "facebook",
+      "url": "#",
+      "title": { "en": "Facebook", "ar": "فيسبوك" }
+    },
+    {
+      "id": "twitter",
+      "url": "#",
+      "title": { "en": "Twitter", "ar": "تويتر" }
+    },
+    {
+      "id": "linkedin",
+      "url": "#",
+      "title": { "en": "LinkedIn", "ar": "لينكد إن" }
+    },
+    {
+      "id": "instagram",
+      "url": "#",
+      "title": { "en": "Instagram", "ar": "إنستغرام" }
+    },
+    {
+      "id": "whatsapp",
+      "url": "#",
+      "title": { "en": "WhatsApp", "ar": "واتساب" }
+    },
+    {
+      "id": "youtube",
+      "url": "#",
+      "title": { "en": "YouTube", "ar": "يوتيوب" }
+    },
+    {
+      "id": "snapchat",
+      "url": "#",
+      "title": { "en": "Snapchat", "ar": "سناب شات" }
+    },
+    {
+      "id": "tiktok",
+      "url": "#",
+      "title": { "en": "TikTok", "ar": "تيك توك" }
+    },
+    {
+      "id": "behance",
+      "url": "#",
+      "title": { "en": "Behance", "ar": "بيهانس" }
+    },
+    {
+      "id": "dribbble",
+      "url": "#",
+      "title": { "en": "Dribbble", "ar": "دريبل" }
+    },
+    {
+      "id": "pinterest",
+      "url": "#",
+      "title": { "en": "Pinterest", "ar": "بنترست" }
+    },
+    {
+      "id": "github",
+      "url": "#",
+      "title": { "en": "Github", "ar": "جيت هب" }
+    },
+    {
+      "id": "codepen",
+      "url": "#",
+      "title": { "en": "CodePen", "ar": "كود بن" }
+    },
+    {
+      "id": "envato",
+      "url": "#",
+      "title": { "en": "Envato", "ar": "انفاتو" }
+    }
+  ]
+}

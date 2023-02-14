@@ -1,0 +1,27 @@
+/*------------------------------------------------------------------------------------------*/
+/* 6. Components Styles */
+/*------------------------------------------------------------------------------------------*/
+
+// Import 'Global UI Styles' File
+@import "../../../styles/components/components";
+
+// Import 'Preloader' Styles File
+@import "preloader";
+
+// Import 'Login Screen' File
+@import "login-screen";
+
+// Import 'Desktop' Styles File
+@import "desktop";
+
+// Import 'Taskbar' File
+@import "taskbar/taskbar";
+
+// Import 'Start Menu' File
+@import "taskbar/start-menu/start-menu";
+
+// Import 'Email' File
+@import "taskbar/start-menu/email";
+
+// Import 'Calendar' File
+@import "taskbar/calendar";

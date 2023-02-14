@@ -1,0 +1,181 @@
+<div class="taskbar mode-transition-bg">
+  <div class="taskbar__startDir">
+    <!-- bg apps button -->
+    <div class="taskbar__bgApps screen-small" v-click-away="closeBgAppsPopup">
+      <button class="taskbar__bgApps__btn taskbar__mainBtn"
+        :title="taskbarApps.length + ' ${{ index.taskbar.bgApps.count }}$'"
+        data-win-id="bgAppsPopup"
+        @click="toggleTaskbarPopup">
+        <svg class="screen-small"><use href="#icon-rounded-apps"/></svg>
+        <span class="taskbar__mainBtn__count">{{ taskbarApps.length || '' }}</span>
+      </button>
+
+      <!-- bg apps popup -->
+      <div tabindex="0" id="bgAppsPopup"
+        class="taskbar__bgApps__popup taskbar__popup"
+        :class="{ 'popup__open': isBgAppsPopupOpen }"
+        @focusin="taskbarAppsFocusin"
+        @focusout="taskbarAppsFocusout">
+        <div class="taskbar__bgApps__header taskbar__popup__header">
+          <strong class="taskbar__popup__header__title">${{ index.taskbar.bgApps.title }}$</strong>
+          <button class="actionBtn" title="${{ index.global.close }}$" @click="closeBgAppsPopup">
+            <svg><use href="#mark-error"/></svg>
+          </button>
+        </div>
+        <div class="taskbar__bgApps__body taskbar__popup__body">
+          <!-- bg apps -->
+          <template v-if="taskbarApps.length">
+            <div class="taskbar__bgApps__list">
+              <button class="taskbar__bgApps__list__btn"
+                v-for="app of taskbarApps" :key="app.id"
+                :data-win-id="app.id"
+                :title="app.title"
+                @click="toggleWindow($event, true)">
+                <span class="taskbar__bgApps__list__icon" v-html="app.icon"></span>
+                <span class="taskbar__bgApps__list__text">{{ app.title }}</span>
+              </button>
+            </div>
+            <p class="text-center">
+              <button class="clear-all-items" @click="closeAllBgApps">${{ index.taskbar.bgApps.closeAll }}$</button>
+            </p>
+          </template>
+          <p class="text-center" v-else>${{ index.taskbar.bgApps.notFound }}$</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- start menu button -->
+    <div class="taskbar__startMenu" v-click-away="closeStartMenuPopup">
+      <button class="taskbar__startMenu__btn taskbar__mainBtn"
+        title="${{ index.taskbar.startMenu.title }}$"
+        data-win-id="startMenuPopup"
+        @click="toggleTaskbarPopup">
+        <svg><use href="#icon-rounded-start-menu"/></svg>
+      </button>
+
+      <!-- menu popup -->
+      @@include('./components/taskbar/start-menu/start-menu.template.html')
+    </div>
+
+    <!-- apps icons -->
+    <div class="taskbar__apps screen-big">
+      <button class="taskbar__apps__btn taskbar__mainBtn"
+        v-for="app in taskbarApps" :key="app.id"
+        :data-win-id="app.id"
+        :title="app.title"
+        v-html="app.icon"
+        @click="toggleWindow"></button>
+    </div>
+  </div>
+
+  <div class="taskbar__endDir">
+    <!-- languages button -->
+    <div class="taskbar__langs" v-click-away="closeLangsPopup">
+      <button class="taskbar__langs__btn taskbar__mainBtn"
+        title="${{ index.taskbar.langs.title }}$"
+        data-win-id="langsPopup"
+        @click="toggleTaskbarPopup">
+        <span class="screen-big">${{ index.i18n.lang.medium }}$</span>
+        <svg class="screen-small"><use href="#icon-rounded-global"/></svg>
+      </button>
+
+      <!-- languages popup -->
+      <div tabindex="0" id="langsPopup"
+        class="taskbar__langs__popup taskbar__popup"
+        :class="{ 'popup__open': isLangsPopupOpen }"
+        @focusin="taskbarAppsFocusin"
+        @focusout="taskbarAppsFocusout">
+        <div class="taskbar__langs__header taskbar__popup__header">
+          <strong class="taskbar__popup__header__title">${{ index.languages }}$</strong>
+          <button class="actionBtn screen-small" title="${{ index.global.close }}$" @click="closeLangsPopup">
+            <svg><use href="#mark-error"/></svg>
+          </button>
+        </div>
+        <div class="taskbar__langs__body taskbar__popup__body">
+          <ul class="taskbar__langs__list">
+            <li class="taskbar__langs__list__item">
+              <a class="taskbar__langs__list__btn active" href="${{ index.prefix }}$index.html">
+                <span class="lang-code">${{ index.i18n.lang.short }}$</span>
+                <span>${{ index.i18n.lang.full }}$</span>
+              </a>
+            </li>
+            <li class="taskbar__langs__list__item">
+              <a class="taskbar__langs__list__btn" href="${{ index.i18n.otherLang.prefix }}$index.html">
+                <span class="lang-code">${{ index.i18n.otherLang.short }}$</span>
+                <span>${{ index.i18n.otherLang.full }}$</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- clock button -->
+    <div class="taskbar__time" v-click-away="closeCalendarPopup">
+      <button class="taskbar__time__btn taskbar__mainBtn"
+        :title="clockDate"
+        data-win-id="calendarPopup"
+        @click="toggleTaskbarPopup">
+        <span class="screen-big">{{ clockTime }}</span>
+        <svg class="screen-small"><use href="#icon-rounded-calendar"/></svg>
+      </button>
+
+      <!-- calendar popup -->
+      @@include('./components/taskbar/calendar/calendar.template.html')
+    </div>
+
+    <!-- notifications button -->
+    <div class="taskbar__notifications" v-click-away="closeNotificationsPopup">
+      <button class="taskbar__notifications__btn taskbar__mainBtn"
+        :title="(frontNotifications.length + backNotifications.length) + ' ${{ index.taskbar.notifications.count }}$'"
+        data-win-id="notificationsPopup"
+        @click="toggleTaskbarPopup">
+        <svg class="screen-big"><use href="#icon-notifications"/></svg>
+        <svg class="screen-small"><use href="#icon-rounded-notifications"/></svg>
+        <span class="taskbar__mainBtn__count">{{ (frontNotifications.length + backNotifications.length) || '' }}</span>
+      </button>
+
+      <!-- notifications popup -->
+      <div tabindex="0" id="notificationsPopup"
+        class="taskbar__notifications__popup taskbar__popup"
+        :class="{ 'popup__open': isNotificationsPopupOpen }"
+        @focusin="taskbarAppsFocusin"
+        @focusout="taskbarAppsFocusout">
+        <div class="taskbar__notifications__header taskbar__popup__header">
+          <strong class="taskbar__popup__header__title">${{ index.taskbar.notifications.title }}$</strong>
+          <button class="actionBtn" title="${{ index.global.close }}$" @click="closeNotificationsPopup">
+            <svg><use href="#mark-error"/></svg>
+          </button>
+        </div>
+        <div class="taskbar__notifications__body taskbar__popup__body">
+          <!-- toast notifications -->
+          <template v-if="backNotifications.length">
+            <ul class="notifications backNotifications">
+              <li v-for="notify of backNotifications"
+                :key="notify.id"
+                :id="notify.id"
+                class="notifications__item show"
+                :class="{[notify.className]: notify.className}">
+                <div :class="['notifications__icon', notify.icon && 'svg-icon']">
+                  <span v-if="notify.icon" v-html="notify.icon"></span>
+                  <img src="assets/images/icons/success.svg" alt="success" v-if="notify?.className === 'success'">
+                  <img src="assets/images/icons/info.svg" alt="info" v-if="notify?.className === 'info'">
+                  <img src="assets/images/icons/warning.svg" alt="warning" v-if="notify?.className === 'warning'">
+                  <img src="assets/images/icons/error.svg" alt="error" v-if="notify?.className === 'danger'">
+                </div>
+                <span class="notifications__text">{{ notify.msg }}</span>
+                <button class="notifications__dismiss actionBtn" title="${{ index.global.remove }}$" @click="removeNotification($event, notify.id)">
+                  <svg><use href="#mark-error"/></svg>
+                </button>
+              </li>
+            </ul>
+            <p class="text-center">
+              <button class="clear-all-items" @click="removeAllNotifications">${{ index.taskbar.notifications.removeAll }}$</button>
+            </p>
+          </template>
+          <p class="text-center" v-else>${{ index.taskbar.notifications.notFound }}$</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

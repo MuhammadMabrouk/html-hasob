@@ -1,0 +1,47 @@
+/* Email Window Styles */
+/*---------------------*/
+.emailWindow {
+  width: 20rem;
+
+  &.appsWindow__maximized {
+    .emailWindow__form {
+      @include flexbox(flex, "", "", "", column, "");
+      height: 100%;
+
+      .group {
+        &.message {
+          flex-grow: 1;
+
+          .control,
+          .control textarea {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  &__form {
+    .group {
+      &.phone-number {
+        .prefix-icon {
+          @include appDir() {
+            transform: dirs(null, rotateY(180deg) translateY(-50%));
+          }
+        }
+      }
+
+      &.message {
+        .control {
+          textarea {
+            resize: none;
+          }
+        }
+      }
+
+      .submit-btn {
+        width: 100%;
+      }
+    }
+  }
+}

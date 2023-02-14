@@ -1,0 +1,64 @@
+{
+  "experience": {
+    "title": { "en": "My Experience", "ar": "خبراتي" },
+    "items": [
+      {
+        "id": "microsoft-swe",
+        "folder": "",
+        "kind": "file",
+        "type": "text",
+        "title": {
+          "en": "Microsoft - Software Engineer",
+          "ar": "مايكروسوفت - مهندس برمجيات"
+        },
+        "date": {
+          "year": "2022",
+          "month": "10",
+          "day": "10"
+        },
+        "content": {
+          "en": "<hr><strong>&nbsp;Software Engineer at Microsoft</strong><hr><p>During my time at Microsoft, I'm working in the Core User Experience of Microsoft Bing ( Bing is a web search engine )</p><p>- Worked on improving Code Coverage and Performance on Bing Results Page.<br>- Solve Bugs to improve the performance and appearance of the search engine.<br>- Add new features and write clean code to help with readability and scalability.<br>- MVC based design and development.</p>",
+          "ar": "<hr><strong>&nbsp;مهندس برمجيات في مايكروسوفت</strong><hr><p>خلال الفترة التي أمضيتها في مايكروسوفت ، أعمل في تجربة المستخدم الأساسية لمايكروسوفت بينغ (بينغ هو محرك بحث على الويب)</p><p>- عملت على تحسين تغطية الكود والأداء في صفحة نتائج بينغ.<br>- حل الأخطاء لتحسين أداء ومظهر محرك البحث.<br>- إضافة ميزات جديدة وكتابة تعليمات برمجية نظيفة للمساعدة في سهولة القراءة وقابلية التوسع.<br>- تصميم وتطوير قائم على MVC.</p>"
+        }
+      },
+      {
+        "id": "google-ss-swe",
+        "folder": "",
+        "kind": "file",
+        "type": "text",
+        "title": {
+          "en": "Google - Senior Staff Software Engineer",
+          "ar": "جوجل - كبير مهندسي البرمجيات"
+        },
+        "date": {
+          "year": "2022",
+          "month": "10",
+          "day": "10"
+        },
+        "content": {
+          "en": "<hr><strong>&nbsp;Senior Staff Software Engineer at Google</strong><hr><p>Engineering manager working on making Chrome & the web fast. My work involves leading some of our projects to help how quickly Chrome loads pages, shaping APIs, and defining best practices to help large sites deliver great user experiences.</p>",
+          "ar": "<hr><strong>&nbsp;كبير مهندسي البرمجيات في جوجل</strong><hr><p>أنا مدير الهندسة أعمل على جعل Chrome والويب سريعًا. يتضمن عملي قيادة بعض مشاريعنا للمساعدة في سرعة تحميل Chrome للصفحات ، وتشكيل واجهات برمجة التطبيقات ، وتحديد أفضل الممارسات لمساعدة المواقع الكبيرة على تقديم تجارب مستخدم رائعة.</p>"
+        }
+      },
+      {
+        "id": "acute-business-frontend",
+        "folder": "",
+        "kind": "file",
+        "type": "text",
+        "title": {
+          "en": "Acute Business - Frontend Developer",
+          "ar": "أكيوت بيزنيس - مطور الواجهة الأمامية"
+        },
+        "date": {
+          "year": "2022",
+          "month": "10",
+          "day": "10"
+        },
+        "content": {
+          "en": "<hr><strong>&nbsp;Frontend Developer at Acute Business</strong><hr><p>My Role:-<br>- Developed and Implemented Frontend tasks through work environment.<br>- Worked with reusable applications to enhance performance and user experience.<br>- Building Dashboard UI, Maintenance Issue and Support Client Requirements.</p>",
+          "ar": "<hr><strong>&nbsp;مطور الواجهة الأمامية في أكيوت بيزنيس</strong><hr><p>دوري في الشركة:-<br>- تطوير وتنفيذ مهام الواجهة الأمامية من خلال بيئة العمل.<br>- العمل مع التطبيقات القابلة لإعادة الاستخدام لتحسين الأداء وتجربة المستخدم.<br>- قمت بإنشاء واجهة مستخدم للوحة التحكم ، ومشكلات الصيانة ، ومتطلبات دعم العملاء.</p>"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,1062 @@
+{
+  "portfolio": {
+    "title": { "en": "My Portfolio", "ar": "معرض أعمالي" },
+    "items": [
+      {
+        "id": "web",
+        "kind": "folder",
+        "title": { "en": "Web", "ar": "الويب" },
+        "date": {
+          "year": "2022",
+          "month": "10",
+          "day": "10"
+        },
+        "files": [
+          {
+            "id": "project-store",
+            "kind": "folder",
+            "title": {
+              "en": "Store website project",
+              "ar": "مشروع موقع المتجر"
+            },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "files": [
+              {
+                "id": "project-store-1",
+                "folder": "project-store",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 1", "ar": "صورة المشروع - 1" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/web/web-9.jpg"
+              },
+              {
+                "id": "project-store-2",
+                "folder": "project-store",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 2", "ar": "صورة المشروع - 2" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/web/web-3.jpg"
+              },
+              {
+                "id": "project-store-3",
+                "folder": "project-store",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 3", "ar": "صورة المشروع - 3" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/web/web-4.jpg"
+              },
+              {
+                "id": "project-store-4",
+                "folder": "project-store",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 4", "ar": "صورة المشروع - 4" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/web/web-1.jpg"
+              },
+              {
+                "id": "project-store-5",
+                "folder": "project-store",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 5", "ar": "صورة المشروع - 5" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/web/web-2.jpg"
+              },
+              {
+                "id": "project-store-6",
+                "folder": "project-store",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 6", "ar": "صورة المشروع - 6" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/web/web-6.jpg"
+              },
+              {
+                "id": "project-store-link",
+                "folder": "project-store",
+                "kind": "file",
+                "type": "webpage",
+                "title": { "en": "Live preview", "ar": "معاينة مباشرة" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "#"
+              },
+              {
+                "id": "project-store-desc",
+                "folder": "project-store",
+                "kind": "file",
+                "type": "text",
+                "title": { "en": "Project description", "ar": "وصف المشروع" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "content": {
+                  "en": "<hr><strong>&nbsp;KFC Website Revamp</strong><hr><p>KFC User Interface Design Proposal.</p><br><hr><strong>&nbsp;Project Description</strong><hr><p>Our team was awarded by the KFC management to help them revamp their current website.</p><p>Ultimate goals:-<br>- Ease audience to order food (Delivery/Self-collect).<br>- Track food prepping progress and delivery status.</p><br><hr><strong>&nbsp;Tools and Technologies</strong><hr><p>HTML, Slim, CSS, Less, JavaScript, TypeScript, Materialize, AJAX, Vue, NodeJs, MongoDB.</p>",
+                  "ar": "<hr><strong>&nbsp;تجديد موقع كنتاكي فرايد تشيكن</strong><hr><p>اقتراح تصميم واجهة مستخدم موقع كنتاكي فرايد تشيكن.</p><br><hr><strong>&nbsp;وصف المشروع</strong><hr><p>تم تكليف فريقنا من قبل إدارة كنتاكي فرايد تشيكن لمساعدتهم في تجديد موقعهم الإلكتروني الحالي.</p><p>الأهداف النهائية:-<br>- تسهيل قيام الجمهور بطلب الطعام (توصيل/استلام ذاتي).<br>- تتبع تقدم عملية تحضير الطعام وحالة التسليم.</p><br><hr><strong>&nbsp;الأدوات والتقنيات</strong><hr><p>HTML, Slim, CSS, Less, JavaScript, TypeScript, Materialize, AJAX, Vue, NodeJs, MongoDB.</p>"
+                }
+              }
+            ]
+          },
+          {
+            "id": "project-football",
+            "kind": "folder",
+            "title": {
+              "en": "Football website project",
+              "ar": "مشروع موقع كرة القدم"
+            },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "files": [
+              {
+                "id": "project-football-1",
+                "folder": "project-football",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 1", "ar": "صورة المشروع - 1" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/web/web-4.jpg"
+              },
+              {
+                "id": "project-football-2",
+                "folder": "project-football",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 2", "ar": "صورة المشروع - 2" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/web/web-9.jpg"
+              },
+              {
+                "id": "project-football-3",
+                "folder": "project-football",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 3", "ar": "صورة المشروع - 3" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/web/web-1.jpg"
+              },
+              {
+                "id": "project-football-4",
+                "folder": "project-football",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 4", "ar": "صورة المشروع - 4" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/web/web-2.jpg"
+              },
+              {
+                "id": "project-football-5",
+                "folder": "project-football",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 5", "ar": "صورة المشروع - 5" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/web/web-6.jpg"
+              },
+              {
+                "id": "project-football-6",
+                "folder": "project-football",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 6", "ar": "صورة المشروع - 6" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/web/web-7.jpg"
+              },
+              {
+                "id": "project-football-link",
+                "folder": "project-football",
+                "kind": "file",
+                "type": "webpage",
+                "title": { "en": "Live preview", "ar": "معاينة مباشرة" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "#"
+              },
+              {
+                "id": "project-football-desc",
+                "folder": "project-football",
+                "kind": "file",
+                "type": "text",
+                "title": { "en": "Project description", "ar": "وصف المشروع" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "content": {
+                  "en": "<hr><strong>&nbsp;KFC Website Revamp</strong><hr><p>KFC User Interface Design Proposal.</p><br><hr><strong>&nbsp;Project Description</strong><hr><p>Our team was awarded by the KFC management to help them revamp their current website.</p><p>Ultimate goals:-<br>- Ease audience to order food (Delivery/Self-collect).<br>- Track food prepping progress and delivery status.</p><br><hr><strong>&nbsp;Tools and Technologies</strong><hr><p>HTML, Slim, CSS, Less, JavaScript, TypeScript, Materialize, AJAX, Vue, NodeJs, MongoDB.</p>",
+                  "ar": "<hr><strong>&nbsp;تجديد موقع كنتاكي فرايد تشيكن</strong><hr><p>اقتراح تصميم واجهة مستخدم موقع كنتاكي فرايد تشيكن.</p><br><hr><strong>&nbsp;وصف المشروع</strong><hr><p>تم تكليف فريقنا من قبل إدارة كنتاكي فرايد تشيكن لمساعدتهم في تجديد موقعهم الإلكتروني الحالي.</p><p>الأهداف النهائية:-<br>- تسهيل قيام الجمهور بطلب الطعام (توصيل/استلام ذاتي).<br>- تتبع تقدم عملية تحضير الطعام وحالة التسليم.</p><br><hr><strong>&nbsp;الأدوات والتقنيات</strong><hr><p>HTML, Slim, CSS, Less, JavaScript, TypeScript, Materialize, AJAX, Vue, NodeJs, MongoDB.</p>"
+                }
+              }
+            ]
+          },
+          {
+            "id": "project-travel",
+            "kind": "folder",
+            "title": {
+              "en": "Travel website project",
+              "ar": "مشروع موقع رحلات السفر"
+            },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "files": [
+              {
+                "id": "project-travel-1",
+                "folder": "project-travel",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 1", "ar": "صورة المشروع - 1" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/web/web-5.jpg"
+              },
+              {
+                "id": "project-travel-2",
+                "folder": "project-travel",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 2", "ar": "صورة المشروع - 2" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/web/web-8.jpg"
+              },
+              {
+                "id": "project-travel-3",
+                "folder": "project-travel",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 3", "ar": "صورة المشروع - 3" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/web/web-1.jpg"
+              },
+              {
+                "id": "project-travel-4",
+                "folder": "project-travel",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 4", "ar": "صورة المشروع - 4" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/web/web-2.jpg"
+              },
+              {
+                "id": "project-travel-5",
+                "folder": "project-travel",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 5", "ar": "صورة المشروع - 5" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/web/web-6.jpg"
+              },
+              {
+                "id": "project-travel-6",
+                "folder": "project-travel",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 6", "ar": "صورة المشروع - 6" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/web/web-7.jpg"
+              },
+              {
+                "id": "project-travel-link",
+                "folder": "project-travel",
+                "kind": "file",
+                "type": "webpage",
+                "title": { "en": "Live preview", "ar": "معاينة مباشرة" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "#"
+              },
+              {
+                "id": "project-travel-desc",
+                "folder": "project-travel",
+                "kind": "file",
+                "type": "text",
+                "title": { "en": "Project description", "ar": "وصف المشروع" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "content": {
+                  "en": "<hr><strong>&nbsp;KFC Website Revamp</strong><hr><p>KFC User Interface Design Proposal.</p><br><hr><strong>&nbsp;Project Description</strong><hr><p>Our team was awarded by the KFC management to help them revamp their current website.</p><p>Ultimate goals:-<br>- Ease audience to order food (Delivery/Self-collect).<br>- Track food prepping progress and delivery status.</p><br><hr><strong>&nbsp;Tools and Technologies</strong><hr><p>HTML, Slim, CSS, Less, JavaScript, TypeScript, Materialize, AJAX, Vue, NodeJs, MongoDB.</p>",
+                  "ar": "<hr><strong>&nbsp;تجديد موقع كنتاكي فرايد تشيكن</strong><hr><p>اقتراح تصميم واجهة مستخدم موقع كنتاكي فرايد تشيكن.</p><br><hr><strong>&nbsp;وصف المشروع</strong><hr><p>تم تكليف فريقنا من قبل إدارة كنتاكي فرايد تشيكن لمساعدتهم في تجديد موقعهم الإلكتروني الحالي.</p><p>الأهداف النهائية:-<br>- تسهيل قيام الجمهور بطلب الطعام (توصيل/استلام ذاتي).<br>- تتبع تقدم عملية تحضير الطعام وحالة التسليم.</p><br><hr><strong>&nbsp;الأدوات والتقنيات</strong><hr><p>HTML, Slim, CSS, Less, JavaScript, TypeScript, Materialize, AJAX, Vue, NodeJs, MongoDB.</p>"
+                }
+              }
+            ]
+          },
+          {
+            "id": "project-bakery",
+            "kind": "folder",
+            "title": {
+              "en": "Bakery website project",
+              "ar": "مشروع موقع المخبز"
+            },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "files": [
+              {
+                "id": "project-bakery-1",
+                "folder": "project-bakery",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 1", "ar": "صورة المشروع - 1" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/web/web-3.jpg"
+              },
+              {
+                "id": "project-bakery-2",
+                "folder": "project-bakery",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 2", "ar": "صورة المشروع - 2" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/web/web-9.jpg"
+              },
+              {
+                "id": "project-bakery-3",
+                "folder": "project-bakery",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 3", "ar": "صورة المشروع - 3" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/web/web-1.jpg"
+              },
+              {
+                "id": "project-bakery-4",
+                "folder": "project-bakery",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 4", "ar": "صورة المشروع - 4" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/web/web-2.jpg"
+              },
+              {
+                "id": "project-bakery-5",
+                "folder": "project-bakery",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 5", "ar": "صورة المشروع - 5" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/web/web-6.jpg"
+              },
+              {
+                "id": "project-bakery-link",
+                "folder": "project-bakery",
+                "kind": "file",
+                "type": "webpage",
+                "title": { "en": "Live preview", "ar": "معاينة مباشرة" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "#"
+              },
+              {
+                "id": "project-bakery-desc",
+                "folder": "project-bakery",
+                "kind": "file",
+                "type": "text",
+                "title": { "en": "Project description", "ar": "وصف المشروع" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "content": {
+                  "en": "<hr><strong>&nbsp;KFC Website Revamp</strong><hr><p>KFC User Interface Design Proposal.</p><br><hr><strong>&nbsp;Project Description</strong><hr><p>Our team was awarded by the KFC management to help them revamp their current website.</p><p>Ultimate goals:-<br>- Ease audience to order food (Delivery/Self-collect).<br>- Track food prepping progress and delivery status.</p><br><hr><strong>&nbsp;Tools and Technologies</strong><hr><p>HTML, Slim, CSS, Less, JavaScript, TypeScript, Materialize, AJAX, Vue, NodeJs, MongoDB.</p>",
+                  "ar": "<hr><strong>&nbsp;تجديد موقع كنتاكي فرايد تشيكن</strong><hr><p>اقتراح تصميم واجهة مستخدم موقع كنتاكي فرايد تشيكن.</p><br><hr><strong>&nbsp;وصف المشروع</strong><hr><p>تم تكليف فريقنا من قبل إدارة كنتاكي فرايد تشيكن لمساعدتهم في تجديد موقعهم الإلكتروني الحالي.</p><p>الأهداف النهائية:-<br>- تسهيل قيام الجمهور بطلب الطعام (توصيل/استلام ذاتي).<br>- تتبع تقدم عملية تحضير الطعام وحالة التسليم.</p><br><hr><strong>&nbsp;الأدوات والتقنيات</strong><hr><p>HTML, Slim, CSS, Less, JavaScript, TypeScript, Materialize, AJAX, Vue, NodeJs, MongoDB.</p>"
+                }
+              }
+            ]
+          },
+          {
+            "id": "project-cms",
+            "kind": "folder",
+            "title": { "en": "CMS website project", "ar": "مشروع موقع CMS" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "files": [
+              {
+                "id": "project-cms-1",
+                "folder": "project-cms",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 1", "ar": "صورة المشروع - 1" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/web/web-1.jpg"
+              },
+              {
+                "id": "project-cms-2",
+                "folder": "project-cms",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 2", "ar": "صورة المشروع - 2" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/web/web-2.jpg"
+              },
+              {
+                "id": "project-cms-3",
+                "folder": "project-cms",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 3", "ar": "صورة المشروع - 3" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/web/web-6.jpg"
+              },
+              {
+                "id": "project-cms-4",
+                "folder": "project-cms",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 4", "ar": "صورة المشروع - 4" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/web/web-7.jpg"
+              },
+              {
+                "id": "project-cms-link",
+                "folder": "project-cms",
+                "kind": "file",
+                "type": "webpage",
+                "title": { "en": "Live preview", "ar": "معاينة مباشرة" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "#"
+              },
+              {
+                "id": "project-cms-desc",
+                "folder": "project-cms",
+                "kind": "file",
+                "type": "text",
+                "title": { "en": "Project description", "ar": "وصف المشروع" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "content": {
+                  "en": "<hr><strong>&nbsp;KFC Website Revamp</strong><hr><p>KFC User Interface Design Proposal.</p><br><hr><strong>&nbsp;Project Description</strong><hr><p>Our team was awarded by the KFC management to help them revamp their current website.</p><p>Ultimate goals:-<br>- Ease audience to order food (Delivery/Self-collect).<br>- Track food prepping progress and delivery status.</p><br><hr><strong>&nbsp;Tools and Technologies</strong><hr><p>HTML, Slim, CSS, Less, JavaScript, TypeScript, Materialize, AJAX, Vue, NodeJs, MongoDB.</p>",
+                  "ar": "<hr><strong>&nbsp;تجديد موقع كنتاكي فرايد تشيكن</strong><hr><p>اقتراح تصميم واجهة مستخدم موقع كنتاكي فرايد تشيكن.</p><br><hr><strong>&nbsp;وصف المشروع</strong><hr><p>تم تكليف فريقنا من قبل إدارة كنتاكي فرايد تشيكن لمساعدتهم في تجديد موقعهم الإلكتروني الحالي.</p><p>الأهداف النهائية:-<br>- تسهيل قيام الجمهور بطلب الطعام (توصيل/استلام ذاتي).<br>- تتبع تقدم عملية تحضير الطعام وحالة التسليم.</p><br><hr><strong>&nbsp;الأدوات والتقنيات</strong><hr><p>HTML, Slim, CSS, Less, JavaScript, TypeScript, Materialize, AJAX, Vue, NodeJs, MongoDB.</p>"
+                }
+              }
+            ]
+          },
+          {
+            "id": "project-ui-kit",
+            "kind": "folder",
+            "title": {
+              "en": "UI Kit website project",
+              "ar": "مشروع موقع UI Kit"
+            },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "files": [
+              {
+                "id": "project-ui-kit-1",
+                "folder": "project-ui-kit",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 1", "ar": "صورة المشروع - 1" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/web/web-6.jpg"
+              },
+              {
+                "id": "project-ui-kit-2",
+                "folder": "project-ui-kit",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 2", "ar": "صورة المشروع - 2" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/web/web-2.jpg"
+              },
+              {
+                "id": "project-ui-kit-3",
+                "folder": "project-ui-kit",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 3", "ar": "صورة المشروع - 3" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/web/web-1.jpg"
+              },
+              {
+                "id": "project-ui-kit-4",
+                "folder": "project-ui-kit",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 4", "ar": "صورة المشروع - 4" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/web/web-7.jpg"
+              },
+              {
+                "id": "project-ui-kit-link",
+                "folder": "project-ui-kit",
+                "kind": "file",
+                "type": "webpage",
+                "title": { "en": "Live preview", "ar": "معاينة مباشرة" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "#"
+              },
+              {
+                "id": "project-ui-kit-desc",
+                "folder": "project-ui-kit",
+                "kind": "file",
+                "type": "text",
+                "title": { "en": "Project description", "ar": "وصف المشروع" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "content": {
+                  "en": "<hr><strong>&nbsp;KFC Website Revamp</strong><hr><p>KFC User Interface Design Proposal.</p><br><hr><strong>&nbsp;Project Description</strong><hr><p>Our team was awarded by the KFC management to help them revamp their current website.</p><p>Ultimate goals:-<br>- Ease audience to order food (Delivery/Self-collect).<br>- Track food prepping progress and delivery status.</p><br><hr><strong>&nbsp;Tools and Technologies</strong><hr><p>HTML, Slim, CSS, Less, JavaScript, TypeScript, Materialize, AJAX, Vue, NodeJs, MongoDB.</p>",
+                  "ar": "<hr><strong>&nbsp;تجديد موقع كنتاكي فرايد تشيكن</strong><hr><p>اقتراح تصميم واجهة مستخدم موقع كنتاكي فرايد تشيكن.</p><br><hr><strong>&nbsp;وصف المشروع</strong><hr><p>تم تكليف فريقنا من قبل إدارة كنتاكي فرايد تشيكن لمساعدتهم في تجديد موقعهم الإلكتروني الحالي.</p><p>الأهداف النهائية:-<br>- تسهيل قيام الجمهور بطلب الطعام (توصيل/استلام ذاتي).<br>- تتبع تقدم عملية تحضير الطعام وحالة التسليم.</p><br><hr><strong>&nbsp;الأدوات والتقنيات</strong><hr><p>HTML, Slim, CSS, Less, JavaScript, TypeScript, Materialize, AJAX, Vue, NodeJs, MongoDB.</p>"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mobile",
+        "kind": "folder",
+        "title": { "en": "Mobile", "ar": "الموبايل" },
+        "date": {
+          "year": "2022",
+          "month": "10",
+          "day": "10"
+        },
+        "files": [
+          {
+            "id": "project-health",
+            "kind": "folder",
+            "title": { "en": "Health app project", "ar": "مشروع تطبيق الصحة" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "files": [
+              {
+                "id": "project-health-1",
+                "folder": "project-health",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 1", "ar": "صورة المشروع - 1" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/mobile/mobile-1.jpg"
+              },
+              {
+                "id": "project-health-2",
+                "folder": "project-health",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 2", "ar": "صورة المشروع - 2" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/mobile/mobile-7.jpg"
+              },
+              {
+                "id": "project-health-link",
+                "folder": "project-health",
+                "kind": "file",
+                "type": "webpage",
+                "title": { "en": "Live preview", "ar": "معاينة مباشرة" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "#"
+              },
+              {
+                "id": "project-health-desc",
+                "folder": "project-health",
+                "kind": "file",
+                "type": "text",
+                "title": { "en": "Project description", "ar": "وصف المشروع" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "content": {
+                  "en": "<hr><strong>&nbsp;KFC Website Revamp</strong><hr><p>KFC User Interface Design Proposal.</p><br><hr><strong>&nbsp;Project Description</strong><hr><p>Our team was awarded by the KFC management to help them revamp their current website.</p><p>Ultimate goals:-<br>- Ease audience to order food (Delivery/Self-collect).<br>- Track food prepping progress and delivery status.</p><br><hr><strong>&nbsp;Tools and Technologies</strong><hr><p>HTML, Slim, CSS, Less, JavaScript, TypeScript, Materialize, AJAX, Vue, NodeJs, MongoDB.</p>",
+                  "ar": "<hr><strong>&nbsp;تجديد موقع كنتاكي فرايد تشيكن</strong><hr><p>اقتراح تصميم واجهة مستخدم موقع كنتاكي فرايد تشيكن.</p><br><hr><strong>&nbsp;وصف المشروع</strong><hr><p>تم تكليف فريقنا من قبل إدارة كنتاكي فرايد تشيكن لمساعدتهم في تجديد موقعهم الإلكتروني الحالي.</p><p>الأهداف النهائية:-<br>- تسهيل قيام الجمهور بطلب الطعام (توصيل/استلام ذاتي).<br>- تتبع تقدم عملية تحضير الطعام وحالة التسليم.</p><br><hr><strong>&nbsp;الأدوات والتقنيات</strong><hr><p>HTML, Slim, CSS, Less, JavaScript, TypeScript, Materialize, AJAX, Vue, NodeJs, MongoDB.</p>"
+                }
+              }
+            ]
+          },
+          {
+            "id": "project-map",
+            "kind": "folder",
+            "title": { "en": "Map app project", "ar": "مشروع تطبيق الخريطة" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "files": [
+              {
+                "id": "project-map-1",
+                "folder": "project-map",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 1", "ar": "صورة المشروع - 1" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/mobile/mobile-2.jpg"
+              },
+              {
+                "id": "project-map-2",
+                "folder": "project-map",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 2", "ar": "صورة المشروع - 2" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/mobile/mobile-8.jpg"
+              },
+              {
+                "id": "project-map-link",
+                "folder": "project-map",
+                "kind": "file",
+                "type": "webpage",
+                "title": { "en": "Live preview", "ar": "معاينة مباشرة" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "#"
+              },
+              {
+                "id": "project-map-desc",
+                "folder": "project-map",
+                "kind": "file",
+                "type": "text",
+                "title": { "en": "Project description", "ar": "وصف المشروع" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "content": {
+                  "en": "<hr><strong>&nbsp;KFC Website Revamp</strong><hr><p>KFC User Interface Design Proposal.</p><br><hr><strong>&nbsp;Project Description</strong><hr><p>Our team was awarded by the KFC management to help them revamp their current website.</p><p>Ultimate goals:-<br>- Ease audience to order food (Delivery/Self-collect).<br>- Track food prepping progress and delivery status.</p><br><hr><strong>&nbsp;Tools and Technologies</strong><hr><p>HTML, Slim, CSS, Less, JavaScript, TypeScript, Materialize, AJAX, Vue, NodeJs, MongoDB.</p>",
+                  "ar": "<hr><strong>&nbsp;تجديد موقع كنتاكي فرايد تشيكن</strong><hr><p>اقتراح تصميم واجهة مستخدم موقع كنتاكي فرايد تشيكن.</p><br><hr><strong>&nbsp;وصف المشروع</strong><hr><p>تم تكليف فريقنا من قبل إدارة كنتاكي فرايد تشيكن لمساعدتهم في تجديد موقعهم الإلكتروني الحالي.</p><p>الأهداف النهائية:-<br>- تسهيل قيام الجمهور بطلب الطعام (توصيل/استلام ذاتي).<br>- تتبع تقدم عملية تحضير الطعام وحالة التسليم.</p><br><hr><strong>&nbsp;الأدوات والتقنيات</strong><hr><p>HTML, Slim, CSS, Less, JavaScript, TypeScript, Materialize, AJAX, Vue, NodeJs, MongoDB.</p>"
+                }
+              }
+            ]
+          },
+          {
+            "id": "project-taxi",
+            "kind": "folder",
+            "title": { "en": "Taxi app project", "ar": "مشروع تطبيق تاكسي" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "files": [
+              {
+                "id": "project-taxi-1",
+                "folder": "project-taxi",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 1", "ar": "صورة المشروع - 1" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/mobile/mobile-3.jpg"
+              },
+              {
+                "id": "project-taxi-2",
+                "folder": "project-taxi",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 2", "ar": "صورة المشروع - 2" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/mobile/mobile-10.jpg"
+              },
+              {
+                "id": "project-taxi-link",
+                "folder": "project-taxi",
+                "kind": "file",
+                "type": "webpage",
+                "title": { "en": "Live preview", "ar": "معاينة مباشرة" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "#"
+              },
+              {
+                "id": "project-taxi-desc",
+                "folder": "project-taxi",
+                "kind": "file",
+                "type": "text",
+                "title": { "en": "Project description", "ar": "وصف المشروع" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "content": {
+                  "en": "<hr><strong>&nbsp;KFC Website Revamp</strong><hr><p>KFC User Interface Design Proposal.</p><br><hr><strong>&nbsp;Project Description</strong><hr><p>Our team was awarded by the KFC management to help them revamp their current website.</p><p>Ultimate goals:-<br>- Ease audience to order food (Delivery/Self-collect).<br>- Track food prepping progress and delivery status.</p><br><hr><strong>&nbsp;Tools and Technologies</strong><hr><p>HTML, Slim, CSS, Less, JavaScript, TypeScript, Materialize, AJAX, Vue, NodeJs, MongoDB.</p>",
+                  "ar": "<hr><strong>&nbsp;تجديد موقع كنتاكي فرايد تشيكن</strong><hr><p>اقتراح تصميم واجهة مستخدم موقع كنتاكي فرايد تشيكن.</p><br><hr><strong>&nbsp;وصف المشروع</strong><hr><p>تم تكليف فريقنا من قبل إدارة كنتاكي فرايد تشيكن لمساعدتهم في تجديد موقعهم الإلكتروني الحالي.</p><p>الأهداف النهائية:-<br>- تسهيل قيام الجمهور بطلب الطعام (توصيل/استلام ذاتي).<br>- تتبع تقدم عملية تحضير الطعام وحالة التسليم.</p><br><hr><strong>&nbsp;الأدوات والتقنيات</strong><hr><p>HTML, Slim, CSS, Less, JavaScript, TypeScript, Materialize, AJAX, Vue, NodeJs, MongoDB.</p>"
+                }
+              }
+            ]
+          },
+          {
+            "id": "project-smart-home",
+            "kind": "folder",
+            "title": {
+              "en": "Smart home app project",
+              "ar": "مشروع تطبيق المنزل الذكي"
+            },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "files": [
+              {
+                "id": "project-smart-home-1",
+                "folder": "project-smart-home",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 1", "ar": "صورة المشروع - 1" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/mobile/mobile-4.jpg"
+              },
+              {
+                "id": "project-smart-home-2",
+                "folder": "project-smart-home",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 2", "ar": "صورة المشروع - 2" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/mobile/mobile-5.jpg"
+              },
+              {
+                "id": "project-smart-home-3",
+                "folder": "project-smart-home",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 3", "ar": "صورة المشروع - 3" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/mobile/mobile-11.jpg"
+              },
+              {
+                "id": "project-smart-home-link",
+                "folder": "project-smart-home",
+                "kind": "file",
+                "type": "webpage",
+                "title": { "en": "Live preview", "ar": "معاينة مباشرة" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "#"
+              },
+              {
+                "id": "project-smart-home-desc",
+                "folder": "project-smart-home",
+                "kind": "file",
+                "type": "text",
+                "title": { "en": "Project description", "ar": "وصف المشروع" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "content": {
+                  "en": "<hr><strong>&nbsp;KFC Website Revamp</strong><hr><p>KFC User Interface Design Proposal.</p><br><hr><strong>&nbsp;Project Description</strong><hr><p>Our team was awarded by the KFC management to help them revamp their current website.</p><p>Ultimate goals:-<br>- Ease audience to order food (Delivery/Self-collect).<br>- Track food prepping progress and delivery status.</p><br><hr><strong>&nbsp;Tools and Technologies</strong><hr><p>HTML, Slim, CSS, Less, JavaScript, TypeScript, Materialize, AJAX, Vue, NodeJs, MongoDB.</p>",
+                  "ar": "<hr><strong>&nbsp;تجديد موقع كنتاكي فرايد تشيكن</strong><hr><p>اقتراح تصميم واجهة مستخدم موقع كنتاكي فرايد تشيكن.</p><br><hr><strong>&nbsp;وصف المشروع</strong><hr><p>تم تكليف فريقنا من قبل إدارة كنتاكي فرايد تشيكن لمساعدتهم في تجديد موقعهم الإلكتروني الحالي.</p><p>الأهداف النهائية:-<br>- تسهيل قيام الجمهور بطلب الطعام (توصيل/استلام ذاتي).<br>- تتبع تقدم عملية تحضير الطعام وحالة التسليم.</p><br><hr><strong>&nbsp;الأدوات والتقنيات</strong><hr><p>HTML, Slim, CSS, Less, JavaScript, TypeScript, Materialize, AJAX, Vue, NodeJs, MongoDB.</p>"
+                }
+              }
+            ]
+          },
+          {
+            "id": "project-transportation",
+            "kind": "folder",
+            "title": {
+              "en": "Transportation app project",
+              "ar": "مشروع تطبيق المواصلات"
+            },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "files": [
+              {
+                "id": "project-transportation-1",
+                "folder": "project-transportation",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 1", "ar": "صورة المشروع - 1" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/mobile/mobile-6.jpg"
+              },
+              {
+                "id": "project-transportation-2",
+                "folder": "project-transportation",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 2", "ar": "صورة المشروع - 2" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/mobile/mobile-9.jpg"
+              },
+              {
+                "id": "project-transportation-3",
+                "folder": "project-transportation",
+                "kind": "file",
+                "type": "image",
+                "title": { "en": "Project image 3", "ar": "صورة المشروع - 3" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "assets/images/portfolio/mobile/mobile-10.jpg"
+              },
+              {
+                "id": "project-transportation-link",
+                "folder": "project-transportation",
+                "kind": "file",
+                "type": "webpage",
+                "title": { "en": "Live preview", "ar": "معاينة مباشرة" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "url": "#"
+              },
+              {
+                "id": "project-transportation-desc",
+                "folder": "project-transportation",
+                "kind": "file",
+                "type": "text",
+                "title": { "en": "Project description", "ar": "وصف المشروع" },
+                "date": {
+                  "year": "2022",
+                  "month": "10",
+                  "day": "10"
+                },
+                "content": {
+                  "en": "<hr><strong>&nbsp;KFC Website Revamp</strong><hr><p>KFC User Interface Design Proposal.</p><br><hr><strong>&nbsp;Project Description</strong><hr><p>Our team was awarded by the KFC management to help them revamp their current website.</p><p>Ultimate goals:-<br>- Ease audience to order food (Delivery/Self-collect).<br>- Track food prepping progress and delivery status.</p><br><hr><strong>&nbsp;Tools and Technologies</strong><hr><p>HTML, Slim, CSS, Less, JavaScript, TypeScript, Materialize, AJAX, Vue, NodeJs, MongoDB.</p>",
+                  "ar": "<hr><strong>&nbsp;تجديد موقع كنتاكي فرايد تشيكن</strong><hr><p>اقتراح تصميم واجهة مستخدم موقع كنتاكي فرايد تشيكن.</p><br><hr><strong>&nbsp;وصف المشروع</strong><hr><p>تم تكليف فريقنا من قبل إدارة كنتاكي فرايد تشيكن لمساعدتهم في تجديد موقعهم الإلكتروني الحالي.</p><p>الأهداف النهائية:-<br>- تسهيل قيام الجمهور بطلب الطعام (توصيل/استلام ذاتي).<br>- تتبع تقدم عملية تحضير الطعام وحالة التسليم.</p><br><hr><strong>&nbsp;الأدوات والتقنيات</strong><hr><p>HTML, Slim, CSS, Less, JavaScript, TypeScript, Materialize, AJAX, Vue, NodeJs, MongoDB.</p>"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

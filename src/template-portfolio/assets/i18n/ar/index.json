@@ -1,0 +1,317 @@
+{
+  "prefix": "ar-",
+  "languages": "اللغات",
+  "i18n": {
+    "lang": {
+      "code": "ar",
+      "short": "ع",
+      "medium": "عربي",
+      "full": "العربية"
+    },
+    "dir": "rtl",
+    "startDir": "right",
+    "endDir": "left",
+    "font": {
+      "code": "Tajawal",
+      "family": "Tajawal"
+    },
+    "locales": "ar-EG",
+    "weekStartDay": "6",
+    "currency": "ج.م",
+    "currencies": {
+      "us": "",
+      "eg": " ج.م"
+    },
+    "otherLang": {
+      "prefix": "",
+      "code": "en",
+      "short": "EN",
+      "medium": "ENG",
+      "full": "English"
+    }
+  },
+
+  "browserTitle": "حاسوب - قالب بورتفوليو HTML",
+
+  "welcomeMsg": "شكرا لدخولك موقعي الشخصي. أحاول دائمًا بذل قصارى جهدي لإنشاء قوالب ويب رائعة وجيدة جدًا.",
+
+  "desktop": {
+    "email": "البريد الإلكتروني",
+    "ticTacToe": "لعبة إكس أو",
+    "memoryCard": "لعبة الذاكرة",
+    "snake": "لعبة الثعبان"
+  },
+
+  "taskbar": {
+    "bgApps": {
+      "title": "التطبيقات في الخلفية",
+      "count": "تطبيق",
+      "closeAll": "إغلاق جميع التطبيقات",
+      "notFound": "لا يوجد تطبيقات"
+    },
+    "startMenu": {
+      "title": "قائمة ابدأ",
+      "preferences": {
+        "title": "التفضيلات",
+        "fileExplorerView": {
+          "title": "عرض مستكشف الملفات",
+          "viewList": "قائمة",
+          "viewGrid": "شبكة"
+        },
+        "hourFormat": {
+          "title": "صيغة الساعة",
+          "hour12": "12 ساعة",
+          "hour24": "24 ساعة"
+        }
+      },
+      "appearance": {
+        "title": "خيارات العرض",
+        "mode": {
+          "title": "المظهر",
+          "light": "فاتح",
+          "dark": "داكن"
+        },
+        "colors": {
+          "title": "الألوان",
+          "primary": {
+            "title": "اللون الأساسي",
+            "confirm": {
+              "title": "إعادة تعيين اللون الأساسي",
+              "msg": "هل تريد بالتأكيد إعادة تعيين اللون الأساسي؟",
+              "okText": "نعم",
+              "cancelText": "لا"
+            }
+          },
+          "secondary": {
+            "title": "اللون الثانوي",
+            "confirm": {
+              "title": "إعادة تعيين اللون الثانوي",
+              "msg": "هل تريد بالتأكيد إعادة تعيين اللون الثانوي",
+              "okText": "نعم",
+              "cancelText": "لا"
+            }
+          }
+        }
+      },
+      "typography": {
+        "title": "النصوص",
+        "fontfamily": {
+          "title": "نوع الخط",
+          "placeholder": "اختر نوع الخط",
+          "confirm": {
+            "title": "إعادة تعيين نوع الخط",
+            "msg": "هل تريد بالتأكيد إعادة تعيين نوع الخط",
+            "okText": "نعم",
+            "cancelText": "لا"
+          }
+        },
+        "fontsize": {
+          "title": "حجم الخط",
+          "confirm": {
+            "title": "إعادة تعيين حجم الخط",
+            "msg": "هل تريد بالتأكيد إعادة تعيين حجم الخط",
+            "okText": "نعم",
+            "cancelText": "لا"
+          }
+        }
+      },
+      "games": {
+        "title": "الألعاب",
+        "ticTacToe": "لعبة إكس أو",
+        "memoryCard": "لعبة الذاكرة",
+        "snake": "لعبة الثعبان"
+      },
+      "contact": {
+        "title": "تواصل معي",
+        "email": "البريد الإلكتروني"
+      },
+      "actions": {
+        "restart": {
+          "title": "إعادة التشغيل",
+          "confirm": {
+            "title": "تأكيد إعادة تشغيل",
+            "msg": "هل تريد بالتأكيد إعادة تشغيل هذه النافذة؟",
+            "okText": "نعم",
+            "cancelText": "لا"
+          }
+        },
+        "logout": {
+          "title": "تسجيل الخروج",
+          "confirm": {
+            "title": "تأكيد تسجيل الخروج",
+            "msg": "هل تريد بالتأكيد تسجيل الخروج؟",
+            "okText": "نعم",
+            "cancelText": "لا"
+          }
+        },
+        "login": {
+          "title": "تسجيل الدخول",
+          "userName": "مصطفى عاشور"
+        }
+      }
+    },
+    "langs": {
+      "title": "لغة العرض"
+    },
+    "calendar": {
+      "title": "التقويم",
+      "date": {
+        "prevYear": "العام السابق",
+        "prevMonth": "الشهر السابق",
+        "nextYear": "العام التالي",
+        "nextMonth": "الشهر التالي"
+      },
+      "events": {
+        "title": "الأحداث",
+        "noEventsMsg": "لا توجد أحداث مجدولة في هذا اليوم!"
+      }
+    },
+    "notifications": {
+      "title": "الإشعارات",
+      "count": "إشعار",
+      "removeAll": "مسح كل الإشعارات",
+      "notFound": "لا يوجد إشعارات جديدة"
+    }
+  },
+
+  "components": {
+    "window": {
+      "actionBtns": {
+        "backward": "للخلف",
+        "forward": "للأمام",
+        "minimize": "تصغير",
+        "maximize": "تكبير",
+        "exit": "إغلاق",
+        "items": "عناصر",
+        "viewList": "عرض على شكل قائمة",
+        "viewGrid": "عرض على شكل شبكة"
+      },
+      "email": {
+        "title": "راسلني",
+        "form": {
+          "name": "الاسم الكامل",
+          "email": "البريد الإلكتروني",
+          "phone": "رقم الهاتف",
+          "message": "محتوى الرسالة",
+          "submitBtn": "إرسال"
+        }
+      },
+      "ticTacToe": {
+        "title": "لعبة إكس أو",
+        "gameWon": "تهانينا! لقد فزت باللعبة! انقر فوق زر إعادة التشغيل للعب مرة أخرى.",
+        "gameOver": "حظ سيء! لقد خسرت اللعبة! انقر فوق زر إعادة التشغيل للعب مرة أخرى."
+      },
+      "memoryCard": {
+        "title": "لعبة الذاكرة",
+        "matches": "متطابق",
+        "turns": "محاولة",
+        "gameWon": "تهانينا! لقد فزت باللعبة! انقر فوق زر إعادة التشغيل للعب مرة أخرى."
+      },
+      "snake": {
+        "title": "لعبة الثعبان",
+        "score": "النقاط",
+        "gameStart": "اضغط على أسهم لوحة المفاتيح لبدء اللعبة وتحريك الثعبان.",
+        "gameStartTouch": "اسحب في أي اتجاه لبدء اللعبة وتحريك الثعبان.",
+        "gameOver": "لقد خسرت! انقر فوق زر إعادة التشغيل للعب مرة أخرى."
+      }
+    }
+  },
+
+  "toastNotifications": {
+    "formsValidation": {
+      "isRequired": "مطلوب",
+      "mustBeAtLeast": "يجب أن يكون على الأقل",
+      "mustBeAtMost": "يجب أن يكون على الأكثر",
+      "characters": "أحرف",
+      "minimum": "يجب أن يكون الحد الأدنى",
+      "maximum": "يجب أن يكون الحد الأقصى",
+      "enterValidEmail": "يرجى إدخال عنوان بريد إلكتروني صالح",
+      "enterValidPhone": "يرجى إدخال رقم هاتف صالح",
+      "enterValidUrl": "يرجى إدخال رابط صالح",
+      "enterValidDate": "يرجى إدخال تاريخ صالح",
+      "cannotContainSpaces": "لا يمكن أن يحتوي على مسافات",
+      "passwordsMustMatch": "يجب مطابقة كلمة المرور",
+      "equalsOldPassword": "لا يمكن أن تكون كلمة المرور الجديدة مماثلة لكلمة المرور القديمة",
+      "enterPasswordFirst": "يرجى إدخال كلمة المرور أولاً",
+      "confirmYourPassword": "يرجى تأكيد كلمة المرور",
+      "enterOldPassword": "الرجاء إدخال كلمة المرور القديمة",
+      "notValidFileFormat": "تنسيق الملف غير صالح ، نحن ندعم فقط",
+      "for": "من أجل"
+    },
+    "changesSaved": "تم حفظ التغييرات بنجاح!",
+    "oopsSomethingWrong": "عفوا! حدث خطأ ما، حاول مرة اخرى.",
+    "messageSent": "تم إرسال الرسالة بنجاح!",
+    "requestSent": "تم إرسال طلبك بنجاح!",
+    "successfullyRegistered": "رائع! تم التسجيل بنجاح!",
+    "successfullyLoggedIn": "تم تسجيل الدخول بنجاح!",
+    "successfullyReviewPosted": "تم نشر مراجعتك!",
+    "successfullyCommentPosted": "تم نشر تعليقك!"
+  },
+  "numbers": {
+    "0": "٠",
+    "1": "١",
+    "2": "٢",
+    "3": "٣",
+    "4": "٤",
+    "5": "٥",
+    "6": "٦",
+    "7": "٧",
+    "8": "٨",
+    "9": "٩"
+  },
+  "global": {
+    "social": {
+      "title": "الشبكات الاجتماعية",
+      "google": "جوجل",
+      "facebook": "فيسبوك",
+      "twitter": "تويتر",
+      "linkedin": "لينكد إن",
+      "instagram": "إنستغرام",
+      "whatsapp": "واتساب",
+      "youtube": "يوتيوب",
+      "snapchat": "سناب شات",
+      "tiktok": "تيك توك",
+      "behance": "بيهانس",
+      "dribbble": "دريبل",
+      "pinterest": "بنترست",
+      "github": "جيت هب",
+      "codepen": "كود بن",
+      "envato": "انفاتو",
+      "email": "البريد الإلكتروني"
+    },
+    "loading": "جاري التحميل",
+    "star": "نجمة",
+    "stars": "نجوم",
+    "yes": "نعم",
+    "no": "لا",
+    "optional": "(اختياري)",
+    "readMore": "اقرأ المزيد",
+    "prev": "السابقة",
+    "next": "التالية",
+    "curPage": "الصفحة الحالية",
+    "postedBy": "نشر بواسطة",
+    "johnDoe": "فلان الفلاني",
+    "comments": "تعليقات",
+    "views": "زيارة",
+    "reviews": "المراجعات",
+    "monthsAgoTime": "أشهر سابقا",
+    "tags": "الوسوم",
+    "share": "مشاركة",
+    "pct": "٪",
+    "download": "تنزيل",
+    "chooseFile": "اختر ملف",
+    "browse": "اختر",
+    "dropFiles": "أفلت الملفات هنا",
+    "select": "اختر...",
+    "search": "بحث...",
+    "noResults": "لا توجد نتائج...",
+    "default": "الإفتراضي",
+    "addNew": "أضف جديد",
+    "restart": "إبدأ من جديد",
+    "reset": "إعادة تعيين",
+    "remove": "إزالة",
+    "close": "إغلاق",
+    "dismiss": "إخفاء",
+    "saveChanges": "حفظ التغييرات"
+  }
+}

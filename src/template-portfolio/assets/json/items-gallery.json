@@ -1,0 +1,312 @@
+{
+  "gallery": {
+    "title": { "en": "My Gallery", "ar": "معرض صوري" },
+    "items": [
+      {
+        "id": "worktime",
+        "kind": "folder",
+        "title": { "en": "Worktime", "ar": "وقت العمل" },
+        "date": {
+          "year": "2022",
+          "month": "10",
+          "day": "10"
+        },
+        "files": [
+          {
+            "id": "work-1",
+            "folder": "worktime",
+            "kind": "file",
+            "type": "image",
+            "title": { "en": "Worktime image 1", "ar": "وقت العمل الصورة 1" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/gallery/worktime/worktime-1.jpg"
+          },
+          {
+            "id": "work-2",
+            "folder": "worktime",
+            "kind": "file",
+            "type": "image",
+            "title": { "en": "Worktime image 2", "ar": "وقت العمل الصورة 2" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/gallery/worktime/worktime-2.jpg"
+          },
+          {
+            "id": "work-3",
+            "folder": "worktime",
+            "kind": "file",
+            "type": "image",
+            "title": { "en": "Worktime image 3", "ar": "وقت العمل الصورة 3" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/gallery/worktime/worktime-3.jpg"
+          },
+          {
+            "id": "work-4",
+            "folder": "worktime",
+            "kind": "file",
+            "type": "image",
+            "title": { "en": "Worktime image 4", "ar": "وقت العمل الصورة 4" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/gallery/worktime/worktime-4.jpg"
+          },
+          {
+            "id": "work-5",
+            "folder": "worktime",
+            "kind": "file",
+            "type": "image",
+            "title": { "en": "Worktime image 5", "ar": "وقت العمل الصورة 5" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/gallery/worktime/worktime-5.jpg"
+          },
+          {
+            "id": "work-6",
+            "folder": "worktime",
+            "kind": "file",
+            "type": "image",
+            "title": { "en": "Worktime image 6", "ar": "وقت العمل الصورة 6" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/gallery/worktime/worktime-6.jpg"
+          },
+          {
+            "id": "work-7",
+            "folder": "worktime",
+            "kind": "file",
+            "type": "image",
+            "title": { "en": "Worktime image 7", "ar": "وقت العمل الصورة 7" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/gallery/worktime/worktime-7.jpg"
+          },
+          {
+            "id": "work-8",
+            "folder": "worktime",
+            "kind": "file",
+            "type": "video",
+            "title": { "en": "Worktime video", "ar": "وقت العمل فيديو" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/gallery/worktime/worktime-8.mp4"
+          }
+        ]
+      },
+      {
+        "id": "travel-trips",
+        "kind": "folder",
+        "title": { "en": "Travel trips", "ar": "رحلات السفر" },
+        "date": {
+          "year": "2022",
+          "month": "10",
+          "day": "10"
+        },
+        "files": [
+          {
+            "id": "travel-trips-1",
+            "folder": "travel-trips",
+            "kind": "file",
+            "type": "image",
+            "title": {
+              "en": "Travel trips image 1",
+              "ar": "رحلات السفر الصورة 1"
+            },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/gallery/travel-trips/travel-trips-1.jpg"
+          },
+          {
+            "id": "travel-trips-2",
+            "folder": "travel-trips",
+            "kind": "file",
+            "type": "image",
+            "title": {
+              "en": "Travel trips image 2",
+              "ar": "رحلات السفر الصورة 2"
+            },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/gallery/travel-trips/travel-trips-2.jpg"
+          },
+          {
+            "id": "travel-trips-3",
+            "folder": "travel-trips",
+            "kind": "file",
+            "type": "image",
+            "title": {
+              "en": "Travel trips image 3",
+              "ar": "رحلات السفر الصورة 3"
+            },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/gallery/travel-trips/travel-trips-3.jpg"
+          },
+          {
+            "id": "travel-trips-4",
+            "folder": "travel-trips",
+            "kind": "file",
+            "type": "image",
+            "title": {
+              "en": "Travel trips image 4",
+              "ar": "رحلات السفر الصورة 4"
+            },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/gallery/travel-trips/travel-trips-4.jpg"
+          },
+          {
+            "id": "travel-trips-5",
+            "folder": "travel-trips",
+            "kind": "file",
+            "type": "image",
+            "title": {
+              "en": "Travel trips image 5",
+              "ar": "رحلات السفر الصورة 5"
+            },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/gallery/travel-trips/travel-trips-5.jpg"
+          },
+          {
+            "id": "travel-trips-6",
+            "folder": "travel-trips",
+            "kind": "file",
+            "type": "image",
+            "title": {
+              "en": "Travel trips image 6",
+              "ar": "رحلات السفر الصورة 6"
+            },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/gallery/travel-trips/travel-trips-6.jpg"
+          },
+          {
+            "id": "travel-trips-7",
+            "folder": "travel-trips",
+            "kind": "file",
+            "type": "image",
+            "title": {
+              "en": "Travel trips image 7",
+              "ar": "رحلات السفر الصورة 7"
+            },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/gallery/travel-trips/travel-trips-7.jpg"
+          },
+          {
+            "id": "travel-trips-8",
+            "folder": "travel-trips",
+            "kind": "file",
+            "type": "video",
+            "title": { "en": "Travel trips video", "ar": "رحلات السفر فيديو" },
+            "date": {
+              "year": "2022",
+              "month": "10",
+              "day": "10"
+            },
+            "url": "assets/images/gallery/travel-trips/travel-trips-8.mp4"
+          }
+        ]
+      },
+      {
+        "id": "uncategorized-1",
+        "folder": "",
+        "kind": "file",
+        "type": "image",
+        "title": { "en": "FB_IMG_1541552073169", "ar": "FB_IMG_1541552073169" },
+        "date": {
+          "year": "2022",
+          "month": "10",
+          "day": "10"
+        },
+        "url": "assets/images/gallery/uncategorized-1.jpg"
+      },
+      {
+        "id": "uncategorized-2",
+        "folder": "",
+        "kind": "file",
+        "type": "image",
+        "title": { "en": "FB_IMG_1559131273861", "ar": "FB_IMG_1559131273861" },
+        "date": {
+          "year": "2022",
+          "month": "10",
+          "day": "10"
+        },
+        "url": "assets/images/gallery/uncategorized-2.jpg"
+      },
+      {
+        "id": "uncategorized-3",
+        "folder": "",
+        "kind": "file",
+        "type": "image",
+        "title": { "en": "FB_IMG_1559132318355", "ar": "FB_IMG_1559132318355" },
+        "date": {
+          "year": "2022",
+          "month": "10",
+          "day": "10"
+        },
+        "url": "assets/images/gallery/uncategorized-3.jpg"
+      },
+      {
+        "id": "uncategorized-4",
+        "folder": "",
+        "kind": "file",
+        "type": "video",
+        "title": { "en": "VID_1549132318751", "ar": "VID_1549132318751" },
+        "date": {
+          "year": "2022",
+          "month": "10",
+          "day": "10"
+        },
+        "url": "assets/images/gallery/uncategorized-4.mp4"
+      }
+    ]
+  }
+}

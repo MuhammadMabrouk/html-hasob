@@ -1,0 +1,160 @@
+{
+  "events": [
+    {
+      "path": "skills/skills/angular",
+      "title": { "en": "Learned my Angular Skill", "ar": "تعلمت مهارتي Angular" },
+      "date": {
+        "year": "2022",
+        "month": "11",
+        "day": "27"
+      },
+      "time": {
+        "from": "",
+        "to": ""
+      }
+    },
+    {
+      "path": "",
+      "title": { "en": "Business lunch", "ar": "غداء عمل" },
+      "date": {
+        "year": "2022",
+        "month": "11",
+        "day": "27"
+      },
+      "time": {
+        "from": "14:00",
+        "to": "15:00"
+      }
+    },
+    {
+      "path": "skills/tools/figma",
+      "title": { "en": "Started using Figma in design", "ar": "بدأت باستخدام Figma في التصميم" },
+      "date": {
+        "year": "2022",
+        "month": "12",
+        "day": "5"
+      },
+      "time": {
+        "from": "",
+        "to": ""
+      }
+    },
+    {
+      "path": "skills/languages/french",
+      "title": { "en": "Learned my French language", "ar": "تعلمت لغتي الفرنسية" },
+      "date": {
+        "year": "2022",
+        "month": "12",
+        "day": "14"
+      },
+      "time": {
+        "from": "",
+        "to": ""
+      }
+    },
+    {
+      "path": "experience/microsoft-swe",
+      "title": { "en": "Got my job at Microsoft", "ar": "حصلت على وظيفتي في Microsoft" },
+      "date": {
+        "year": "2022",
+        "month": "12",
+        "day": "17"
+      },
+      "time": {
+        "from": "",
+        "to": ""
+      }
+    },
+    {
+      "path": "gallery/worktime/work-4",
+      "title": { "en": "Work meeting", "ar": "اجتماع عمل" },
+      "date": {
+        "year": "2022",
+        "month": "12",
+        "day": "17"
+      },
+      "time": {
+        "from": "12:00",
+        "to": "13:00"
+      }
+    },
+    {
+      "path": "portfolio/web/project-bakery/project-bakery-1",
+      "title": { "en": "Finished the Bakery website project", "ar": "انتهيت من مشروع موقع المخبز" },
+      "date": {
+        "year": "2022",
+        "month": "12",
+        "day": "26"
+      },
+      "time": {
+        "from": "",
+        "to": ""
+      }
+    },
+    {
+      "path": "",
+      "title": { "en": "Business lunch", "ar": "غداء عمل" },
+      "date": {
+        "year": "2022",
+        "month": "12",
+        "day": "26"
+      },
+      "time": {
+        "from": "14:00",
+        "to": "15:00"
+      }
+    },
+    {
+      "path": "portfolio/mobile/project-taxi/project-taxi-1",
+      "title": { "en": "Finished the Taxi app project", "ar": "انتهيت من مشروع تطبيق تاكسي" },
+      "date": {
+        "year": "2022",
+        "month": "12",
+        "day": "29"
+      },
+      "time": {
+        "from": "",
+        "to": ""
+      }
+    },
+    {
+      "path": "",
+      "title": { "en": "Business lunch", "ar": "غداء عمل" },
+      "date": {
+        "year": "2022",
+        "month": "12",
+        "day": "29"
+      },
+      "time": {
+        "from": "14:00",
+        "to": "15:00"
+      }
+    },
+    {
+      "path": "gallery/travel-trips/travel-trips-6",
+      "title": { "en": "Got a vacation in a seaside town", "ar": "حصلت على إجازة في بلدة ساحلية" },
+      "date": {
+        "year": "2023",
+        "month": "1",
+        "day": "2"
+      },
+      "time": {
+        "from": "",
+        "to": ""
+      }
+    },
+    {
+      "path": "gallery/uncategorized-3",
+      "title": { "en": "Happy memories with my horse", "ar": "ذكريات سعيدة مع حصاني" },
+      "date": {
+        "year": "2023",
+        "month": "1",
+        "day": "14"
+      },
+      "time": {
+        "from": "",
+        "to": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+/* Input Radio & Checkbox Styles */
+/*-------------------------------*/
+.form-styled {
+  .checker {
+    &__btn {
+      --btn-size: 1.125rem;
+
+      position: relative;
+
+      &__input {
+        position: absolute;
+        height: 0;
+        width: 0;
+        opacity: 0;
+
+        &:not(:checked) {
+          + .checker__btn__label {
+            background-color: hsl(var(--inputs-bg-color));
+            border-color: hsl(var(--border-color));
+
+            &:after {
+              height: 0;
+              width: 0;
+              background-color: hsl(var(--bg-color-one));
+            }
+          }
+        }
+
+        &:checked + .checker__btn__label,
+        &[type="checkbox"]:indeterminate + .checker__btn__label {
+          border-color: hsl(var(--main-color-one));
+
+          &:after {
+            width: calc((var(--btn-size) / 2) + 1px);
+            background-color: hsl(var(--main-color-one));
+          }
+        }
+
+        &:checked + .checker__btn__label:after {
+          height: calc((var(--btn-size) / 2) + 1px);
+        }
+
+        &[type="checkbox"]:indeterminate + .checker__btn__label:after {
+          height: 2px;
+        }
+
+        &:disabled + .checker__btn__label {
+          border-color: hsl(var(--bg-color-one));
+
+          &:after {
+            height: 100%;
+            width: 100%;
+            background-color: hsl(var(--inputs-disabled-bg-color));
+          }
+        }
+      }
+
+      &__label {
+        position: relative;
+        display: block;
+        height: var(--btn-size);
+        width: var(--btn-size);
+        border: 1px solid;
+        transition: all 0.3s ease-in-out;
+
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          transition: inherit;
+        }
+      }
+
+      &:focus-within {
+        @include focusStyle();
+      }
+    }
+
+    &__textLabel {
+      font-size: 0.875rem;
+    }
+
+    &--radio {
+      .checker__btn__label,
+      .checker__btn__label:after {
+        border-radius: 50%;
+      }
+    }
+
+    &:not(.checker--img) {
+      @include flexbox(flex, "", center, "", "", "");
+
+      .checker {
+        &__btn {
+          &__imgLabel {
+            display: none;
+          }
+        }
+
+        &__textLabel {
+          @include appDir() {
+            margin-#{dirs(left, right)}: 0.75rem;
+          }
+        }
+      }
+    }
+
+    &--img {
+      @include flexbox(inline-flex, "", "", "", column, "");
+
+      .checker {
+        &__btn {
+          height: var(--img-height, 4rem);
+          width: var(--img-width, 4rem);
+          border-radius: var(--radius-size);
+          overflow: hidden;
+
+          &__label {
+            z-index: 2;
+            background-color: hsl(var(--inputs-bg-color));
+            margin: 0.25rem;
+          }
+
+          &__imgLabel {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+
+            img,
+            svg {
+              display: block;
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+
+        &__textLabel {
+          padding: 0 0.35rem;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+
+    &.invalid {
+      label {
+        color: hsl(var(--danger-color)) !important;
+        border-color: hsl(var(--danger-color)) !important;
+      }
+    }
+
+    &.valid {
+      label {
+        color: hsl(var(--success-color)) !important;
+        border-color: hsl(var(--success-color)) !important;
+      }
+    }
+  }
+}

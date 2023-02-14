@@ -1,0 +1,110 @@
+/* Toast Notifications Styles */
+/*----------------------------*/
+.notifications {
+  --notify-width: 17.5rem;
+
+  line-height: 1.75rem;
+
+  &.frontNotifications {
+    position: fixed;
+    z-index: 4000;
+    bottom: calc(var(--taskbar-height) + 1rem);
+    width: var(--notify-width);
+
+    @include appDir() {
+      #{dirs(right, left)}: 1rem;
+    }
+
+    .notifications__item {
+      filter: var(--drop-shadow);
+    }
+  }
+
+  &__item {
+    @include flexbox(flex, "", stretch, "", "", "");
+    position: relative;
+    width: 100%;
+    background-color: hsl(var(--bg-color-three));
+    color: hsl(var(--text-color));
+    border-radius: var(--radius-size);
+
+    @include appDir() {
+      padding: dirs(0.5rem 0.4rem 0.5rem 0.75rem, 0.5rem 0.75rem 0.5rem 0.4rem);
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 0.5rem;
+    }
+
+    &.success {
+      .notifications__icon {
+        background-color: hsl(var(--success-color));
+      }
+    }
+
+    &.info {
+      .notifications__icon {
+        background-color: hsl(var(--info-color));
+      }
+    }
+
+    &.warning {
+      .notifications__icon {
+        background-color: hsl(var(--warning-color));
+        color: hsl(var(--dark-color));
+      }
+    }
+
+    &.danger {
+      .notifications__icon {
+        background-color: hsl(var(--danger-color));
+      }
+    }
+  }
+
+  &__icon {
+    @include flexbox(flex, "", center, center, "", "");
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+
+    &.svg-icon,
+    svg {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+
+    img {
+      display: block;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__text {
+    display: block;
+    width: calc(100% - (2rem + 1.5rem));
+    padding: 0 0.75rem;
+  }
+
+  .notify-enter-active {
+    animation: 0.3s ease-in-out;
+
+    @include appDir() {
+      animation-name: dirs(slideInLeft, slideInRight);
+    }
+  }
+
+  .notify-leave-active {
+    animation: 0.3s ease-in-out reverse;
+
+    @include appDir() {
+      animation-name: dirs(slideInLeft, slideInRight);
+    }
+  }
+
+  .notify-move {
+    transition: transform 0.3s ease-in-out;
+  }
+}

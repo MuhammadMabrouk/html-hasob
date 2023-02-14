@@ -1,0 +1,317 @@
+{
+  "prefix": "",
+  "languages": "Languages",
+  "i18n": {
+    "lang": {
+      "code": "en",
+      "short": "EN",
+      "medium": "ENG",
+      "full": "English"
+    },
+    "dir": "ltr",
+    "startDir": "left",
+    "endDir": "right",
+    "font": {
+      "code": "Open+Sans",
+      "family": "Open Sans"
+    },
+    "locales": "en-US",
+    "weekStartDay": "0",
+    "currency": "$",
+    "currencies": {
+      "us": "$",
+      "eg": ""
+    },
+    "otherLang": {
+      "prefix": "ar-",
+      "code": "ar",
+      "short": "ع",
+      "medium": "عربي",
+      "full": "العربية"
+    }
+  },
+
+  "browserTitle": "Hasob - HTML Portfolio Template",
+
+  "welcomeMsg": "Thanks for checking out my profile. I'm always trying my best to make pretty good awesome web templates.",
+
+  "desktop": {
+    "email": "Email",
+    "ticTacToe": "Tic Tac Toe Game",
+    "memoryCard": "Memory Game",
+    "snake": "Snake Game"
+  },
+
+  "taskbar": {
+    "bgApps": {
+      "title": "Background Apps",
+      "count": "Apps",
+      "closeAll": "Close all apps",
+      "notFound": "There are no apps"
+    },
+    "startMenu": {
+      "title": "Start Menu",
+      "preferences": {
+        "title": "Preferences",
+        "fileExplorerView": {
+          "title": "File explorer view",
+          "viewList": "List",
+          "viewGrid": "Grid"
+        },
+        "hourFormat": {
+          "title": "Hour Format",
+          "hour12": "12 Hour",
+          "hour24": "24 Hour"
+        }
+      },
+      "appearance": {
+        "title": "Appearance",
+        "mode": {
+          "title": "Mode",
+          "light": "Light",
+          "dark": "Dark"
+        },
+        "colors": {
+          "title": "Colors",
+          "primary": {
+            "title": "Primary Color",
+            "confirm": {
+              "title": "Primary color reset",
+              "msg": "Are you sure you want to reset the primary color?",
+              "okText": "Yes",
+              "cancelText": "No"
+            }
+          },
+          "secondary": {
+            "title": "Secondary Color",
+            "confirm": {
+              "title": "Secondary color reset",
+              "msg": "Are you sure you want to reset the secondary color?",
+              "okText": "Yes",
+              "cancelText": "No"
+            }
+          }
+        }
+      },
+      "typography": {
+        "title": "Typography",
+        "fontfamily": {
+          "title": "Font Family",
+          "placeholder": "Select a font",
+          "confirm": {
+            "title": "Font family reset",
+            "msg": "Are you sure you want to reset the font family?",
+            "okText": "Yes",
+            "cancelText": "No"
+          }
+        },
+        "fontsize": {
+          "title": "Font Size",
+          "confirm": {
+            "title": "Font size reset",
+            "msg": "Are you sure you want to reset the font size?",
+            "okText": "Yes",
+            "cancelText": "No"
+          }
+        }
+      },
+      "games": {
+        "title": "Games",
+        "ticTacToe": "Tic Tac Toe",
+        "memoryCard": "Memory Card",
+        "snake": "Snake"
+      },
+      "contact": {
+        "title": "Contact",
+        "email": "Email"
+      },
+      "actions": {
+        "restart": {
+          "title": "Restart",
+          "confirm": {
+            "title": "Confirm restart",
+            "msg": "Are you sure you want to restart this window?",
+            "okText": "Yes",
+            "cancelText": "No"
+          }
+        },
+        "logout": {
+          "title": "Logout",
+          "confirm": {
+            "title": "Confirm logout",
+            "msg": "Are you sure you want to logout?",
+            "okText": "Yes",
+            "cancelText": "No"
+          }
+        },
+        "login": {
+          "title": "Login",
+          "userName": "Adam Wales"
+        }
+      }
+    },
+    "langs": {
+      "title": "Display language"
+    },
+    "calendar": {
+      "title": "Calendar",
+      "date": {
+        "prevYear": "Previous Year",
+        "prevMonth": "Previous Month",
+        "nextYear": "Next Year",
+        "nextMonth": "Next Month"
+      },
+      "events": {
+        "title": "Events",
+        "noEventsMsg": "No scheduled events at this day!"
+      }
+    },
+    "notifications": {
+      "title": "Notifications",
+      "count": "Notifications",
+      "removeAll": "Clear all notifications",
+      "notFound": "No new notifications"
+    }
+  },
+
+  "components": {
+    "window": {
+      "actionBtns": {
+        "backward": "Backward",
+        "forward": "Forward",
+        "minimize": "Minimize",
+        "maximize": "Maximize",
+        "exit": "Exit",
+        "items": "Items",
+        "viewList": "Show as list",
+        "viewGrid": "Show as grid"
+      },
+      "email": {
+        "title": "Email Me",
+        "form": {
+          "name": "Your Name",
+          "email": "Your Email",
+          "phone": "Your Phone",
+          "message": "Your Message",
+          "submitBtn": "Submit"
+        }
+      },
+      "ticTacToe": {
+        "title": "Tic Tac Toe Game",
+        "gameWon": "Great! You won the game! Click restart button to play again.",
+        "gameOver": "Bad luck! You lost the game! Click restart button to play again."
+      },
+      "memoryCard": {
+        "title": "Memory Card Game",
+        "matches": "Matches",
+        "turns": "Turns",
+        "gameWon": "Great! You won the game! Click restart button to play again."
+      },
+      "snake": {
+        "title": "Snake Game",
+        "score": "Score",
+        "gameStart": "Press the keyboard arrows to start the game and move the snake.",
+        "gameStartTouch": "Swipe in any direction to start the game and move the snake.",
+        "gameOver": "Game Over! Click restart button to play again."
+      }
+    }
+  },
+
+  "toastNotifications": {
+    "formsValidation": {
+      "isRequired": "is required",
+      "mustBeAtLeast": "must be at least",
+      "mustBeAtMost": "must be at most",
+      "characters": "characters",
+      "minimum": "should be minimum",
+      "maximum": "should be maximum",
+      "enterValidEmail": "Please enter a valid email address",
+      "enterValidPhone": "Please enter a valid Phone Number",
+      "enterValidUrl": "Please enter a valid URL",
+      "enterValidDate": "Please enter a valid Date",
+      "cannotContainSpaces": "cannot contain spaces",
+      "passwordsMustMatch": "Passwords must match",
+      "equalsOldPassword": "New password cannot be the same as your old password",
+      "enterPasswordFirst": "Please enter your password first",
+      "confirmYourPassword": "Please confirm your password",
+      "enterOldPassword": "Please enter your old password",
+      "notValidFileFormat": "Not a valid file format, we only support",
+      "for": "for"
+    },
+    "changesSaved": "Changes saved successfully!",
+    "oopsSomethingWrong": "Oops! something went wrong, please try again.",
+    "messageSent": "Message sent successfully!",
+    "requestSent": "Your request has been sent successfully!",
+    "successfullyRegistered": "Great! successfully registered!",
+    "successfullyLoggedIn": "Successfully logged in!",
+    "successfullyReviewPosted": "Your review has been posted!",
+    "successfullyCommentPosted": "Your comment has been posted!"
+  },
+  "numbers": {
+    "0": "0",
+    "1": "1",
+    "2": "2",
+    "3": "3",
+    "4": "4",
+    "5": "5",
+    "6": "6",
+    "7": "7",
+    "8": "8",
+    "9": "9"
+  },
+  "global": {
+    "social": {
+      "title": "Social Networks",
+      "google": "Google",
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram",
+      "whatsapp": "WhatsApp",
+      "youtube": "YouTube",
+      "snapchat": "Snapchat",
+      "tiktok": "TikTok",
+      "behance": "Behance",
+      "dribbble": "Dribbble",
+      "pinterest": "Pinterest",
+      "github": "Github",
+      "codepen": "CodePen",
+      "envato": "Envato",
+      "email": "Email"
+    },
+    "loading": "Loading",
+    "star": "Star",
+    "stars": "Stars",
+    "yes": "Yes",
+    "no": "No",
+    "optional": "(Optional)",
+    "readMore": "Read More",
+    "prev": "Previous",
+    "next": "Next",
+    "curPage": "Current Page",
+    "postedBy": "Posted by",
+    "johnDoe": "John Doe",
+    "comments": "Comments",
+    "views": "Views",
+    "reviews": "Reviews",
+    "monthsAgoTime": "Months ago",
+    "tags": "Tags",
+    "share": "Share",
+    "pct": "%",
+    "download": "Download",
+    "chooseFile": "Choose File",
+    "browse": "Browse",
+    "dropFiles": "Drop files here",
+    "select": "Select...",
+    "search": "Search...",
+    "noResults": "No results found...",
+    "default": "Default",
+    "addNew": "Add New",
+    "restart": "Restart",
+    "reset": "Reset",
+    "remove": "Remove",
+    "close": "Close",
+    "dismiss": "Dismiss",
+    "saveChanges": "Save Changes"
+  }
+}

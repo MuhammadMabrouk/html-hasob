@@ -1,0 +1,6 @@
+{
+  "vue": "node_modules/vue/dist/vue.global.prod.js",
+  "webrouk-custom-select": "node_modules/webrouk-custom-select/webrouk-custom-select.js",
+  "webrouk-custom-number": "node_modules/webrouk-custom-number/webrouk-custom-number.js",
+  "glightbox": "node_modules/glightbox/dist/js/glightbox.min.js"
+}

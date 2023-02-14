@@ -1,0 +1,39 @@
+{
+  "desktop": [
+    {
+      "id": "about",
+      "type": "text-file",
+      "url": "assets/json/items-about.json",
+      "icon": "assets/images/desktop/about.svg",
+      "title": { "en": "About", "ar": "نبذة عني" }
+    },
+    {
+      "id": "skills",
+      "type": "file-explorer",
+      "url": "assets/json/items-skills.json",
+      "icon": "assets/images/desktop/skills.svg",
+      "title": { "en": "Skills", "ar": "المهارات" }
+    },
+    {
+      "id": "experience",
+      "type": "file-explorer",
+      "url": "assets/json/items-experience.json",
+      "icon": "assets/images/desktop/experience.svg",
+      "title": { "en": "Experience", "ar": "الخبرات" }
+    },
+    {
+      "id": "portfolio",
+      "type": "file-explorer",
+      "url": "assets/json/items-portfolio.json",
+      "icon": "assets/images/desktop/portfolio.svg",
+      "title": { "en": "Portfolio", "ar": "المشاريع" }
+    },
+    {
+      "id": "gallery",
+      "type": "file-explorer",
+      "url": "assets/json/items-gallery.json",
+      "icon": "assets/images/desktop/gallery.svg",
+      "title": { "en": "Gallery", "ar": "المعرض" }
+    }
+  ]
+}

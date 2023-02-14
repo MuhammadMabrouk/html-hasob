@@ -1,0 +1,48 @@
+<div tabindex="0"
+  id="snakeWindow"
+  class="snakeWindow appsWindow draggable mode-transition-bg"
+  :class="isSnakeWindowOpen && 'appsWindow__open'"
+  @focusin="taskbarAppsFocusin"
+  @focusout="taskbarAppsFocusout">
+
+  <!-- window title bar -->
+  <div class="appsWindow__titleBar dragger">
+    <strong class="appsWindow__titleBar__title" title="${{ index.components.window.snake.title }}$">
+      <span class="appsWindow__titleBar__icon" v-html="snakeGameIcon"></span>
+      <span class="appsWindow__titleBar__text">${{ index.components.window.snake.title }}$</span>
+    </strong>
+    <ul class="appsWindow__titleBar__actionBtns" @mousedown.stop @touchstart.stop>
+      <li class="appsWindow__titleBar__actionItem minimizeBtn">
+        <button class="appsWindow__titleBar__actionBtn actionBtn" title="${{ index.components.window.actionBtns.minimize }}$" @click="closeWindow($event, true)">
+          <svg><use href="#mark-minimize"/></svg>
+        </button>
+      </li>
+      <li class="appsWindow__titleBar__actionItem maximizeBtn">
+        <button class="appsWindow__titleBar__actionBtn actionBtn" title="${{ index.components.window.actionBtns.maximize }}$" @click="maximizeWindow">
+          <svg><use href="#mark-maximize"/></svg>
+        </button>
+      </li>
+      <li class="appsWindow__titleBar__actionItem exitBtn">
+        <button class="appsWindow__titleBar__actionBtn actionBtn" title="${{ index.components.window.actionBtns.exit }}$" @click="closeWindow">
+          <svg><use href="#mark-error"/></svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- window workspace -->
+  <div class="snakeWindow__workspace appsWindow__workspace">
+    <div class="snakeWindow__content">
+      <div class="snakeWindow__controls">
+        <div class="snakeWindow__btn snakeWindow__btn--control">${{ index.components.window.snake.score }}$: {{ snakeScore }}</div>
+        <button class="snakeWindow__btn snakeWindow__btn--restart" title="${{ index.global.restart }}$" @click="snakeGameRestart">
+          <img src="assets/images/icons/reset.svg" alt="${{ index.global.reset }}$">
+        </button>
+      </div>
+      <div class="snakeWindow__boxes"
+        data-game-start-msg="${{ index.components.window.snake.gameStart }}$"
+        data-game-start-touch-msg="${{ index.components.window.snake.gameStartTouch }}$"
+        data-game-over-msg="${{ index.components.window.snake.gameOver }}$"></div>
+    </div>
+  </div>
+</div>

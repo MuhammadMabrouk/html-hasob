@@ -1,0 +1,173 @@
+/* Calendar Styles */
+/*-----------------*/
+.calendar {
+  @media #{$min_992} {
+    width: 19.5rem;
+
+    @include appDir() {
+      #{dirs(right, left)}: -2.375rem;
+    }
+  }
+
+  &__header {
+    div button:first-child {
+      @include appDir() {
+        margin-#{dirs(right, left)}: 0.25rem;
+      }
+    }
+
+    &.second-header {
+      @media #{$max_991} {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__weekdays,
+  &__days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.25rem;
+  }
+
+  &__weekdays__day,
+  &__days__day {
+    @include flexbox(flex, "", center, center, "", "");
+
+    @media #{$min_992} {
+      height: 2.35rem;
+    }
+
+    @media #{$max_991} {
+      height: 2.75rem;
+    }
+  }
+
+  &__weekdays {
+    margin-bottom: 0.25rem;
+  }
+
+  &__days {
+    &__day {
+      border-radius: var(--radius-size);
+
+      &:not(.day__prev):not(.day__next):not(.day__today) {
+        background-color: hsl(var(--bg-color-three));
+      }
+
+      &:not(.day__today) {
+        border: 0.125rem solid transparent;
+        transition: border-color 0.15s ease-in-out;
+
+        &:hover,
+        &:focus,
+        &.active {
+          border-color: hsl(var(--main-color-one));
+        }
+      }
+    }
+
+    .has__events {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0.1875rem;
+        height: 0.1875rem;
+        width: 0.5rem;
+        border-radius: 0.5rem;
+        background-color: var(--event-color, hsl(var(--main-color-two)));
+      }
+    }
+
+    .day__today {
+      background-color: hsl(var(--main-color-one));
+      color: hsl(var(--light-color));
+    }
+
+    .day__prev,
+    .day__next {
+      opacity: 0.5;
+    }
+  }
+
+  // calendar events
+  &__events {
+    @media #{$min_992} {
+      @include appDir() {
+        #{dirs(right, left)}: 100%;
+        border-#{dirs(right, left)}: 0.0625rem solid hsl(var(--border-color));
+        transform: translateX(dirs(1.25rem, -1.25rem));
+      }
+    }
+
+    &__list {
+      line-height: initial;
+      padding: 0.25rem 0;
+    }
+
+    &__item {
+      animation: fadeInUp 0.3s ease-out backwards;
+      animation-delay: calc(var(--animation-order) * 100ms);
+
+      &:not(:last-of-type) {
+        margin-bottom: 0.75rem;
+      }
+    }
+
+    &__linked,
+    &__notLinked {
+      display: block;
+      min-height: 2.75rem;
+      line-height: inherit;
+      width: 100%;
+      text-align: start;
+      background-color: hsl(var(--bg-color-three));
+      border-radius: var(--radius-size);
+      border: 0.125rem solid transparent;
+      transition: border-color 0.15s ease-in-out;
+
+      span {
+        display: block;
+        width: calc(100% - 1.5rem);
+      }
+
+      &__period {
+        margin-top: 0.35rem;
+
+        @include appDir() {
+          font-size: dirs(0.875rem, 1rem);
+        }
+      }
+
+      &:hover,
+      &:focus {
+        border-color: hsl(var(--main-color-one));
+      }
+    }
+
+    &__linked {
+      position: relative;
+      padding: 0.25rem 0.75rem;
+
+      svg {
+        position: absolute;
+        top: 50%;
+        height: 1.5rem;
+        width: 1.5rem;
+
+        @include appDir() {
+          #{dirs(right, left)}: 0.375rem;
+          transform: dirs(translateY(-50%), translateY(-50%) rotateY(180deg));
+        }
+      }
+    }
+
+    &__notLinked {
+      padding: 0.25rem 0.75rem;
+    }
+  }
+}
